@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Java Service Tree Framework - DevOps Portal - 313 DEV GRP</title>
+    <title>Developer Portal - jsTree Service Framework - TSF - 313 DEV GRP</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta http-equiv="Expire" content="-1"/>
-    <meta http-equiv="Keywords" content="Java Service Tree Framework, DevOps Portal"/>
+    <meta http-equiv="Keywords" content="jsTree Service Framework, 313 DEV GRP Developer Portal"/>
     <meta http-equiv="Reply-to" content="313@313.co.kr"/>
     <meta http-equiv="Content-Language" content="Korean"/>
     <meta http-equiv="Last-Modified" content="Thu 01 Nov 2016 23:59:59"/>
@@ -23,15 +23,15 @@
     <meta http-equiv="content-Style-type" content="text/css"/>
 
     <meta name="robots" content="ALL, INDEX, FOLLOW"/>
-    <meta name="Subject" content="313 DEV GRP DevOps Portal"/>
-    <meta name="Filename" content="index.html"/>
+    <meta name="Subject" content="313 DEV GRP Developer Portal"/>
+    <meta name="Filename" content="ARMS.html"/>
     <meta name="Author-Date" content="31 Oct 16"/>
     <meta name="Date" content="31 Oct 16"/>
     <meta name="Author" content="313 DEV GRP"/>
     <meta name="Other Agent" content="LeeDongMin"/>
     <meta name="Email" content="313@313.co.kr"/>
     <meta name="Reply-To" content="313@313.co.kr"/>
-    <meta name="Project" content="313 DEV GRP DevOps Portal"/>
+    <meta name="Project" content="313 DEV GRP Developer Portal"/>
     <meta name="Status" content="Draft"/>
     <meta name="Location" content="South Korea"/>
     <meta name="/distribution" content="313 DEV GRP"/>
@@ -40,17 +40,17 @@
     <meta name="Revision" content="1.0"/>
     <meta name="Generator" content="eclipse 3.6.1"/>
     <meta name="Classification" content="Development,Deployment"/>
-    <meta name="Copyright" content="CopyRight @ 313 DEV GRP. All Rights Reserved"/>
-    <meta name="title" content="313 DEV GRP DevOps Portal"/>
+    <meta name="Copyright" content="CopyRight @ 313 Developer Group. All Rights Reserved"/>
+    <meta name="title" content="313 DEV GRP Developer Portal"/>
     <meta name="revisit-after" content="7 days"/>
     <meta name="siteinfo" content="http://www.313.co.kr/robots.txt"/>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="MobileOptimized" content="320"/>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="313 DEV GRP DevOps Portal">
+    <meta property="og:title" content="313 DEV GRP Developer Portal">
     <meta property="og:url" content="http://www.313.co.kr/">
-    <meta property="og:site_name" content="313 DEV GRP DevOps Portal">
+    <meta property="og:site_name" content="313 DEV GRP Developer Portal">
 
     <!-- favicon -->
     <link rel="icon" href="http://www.313.co.kr/DeveloperPortal/Design/index/go.ico" type="image/x-icon"/>
@@ -63,9 +63,9 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="../dist/css/ArmsLTE.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../dist/css/skins/skin-black-light.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-black-light-arms.css">
     <!-- Morris chart -->
     <link rel="stylesheet" href="../bower_components/morris.js/morris.css">
     <!-- jvectormap -->
@@ -76,6 +76,8 @@
     <link rel="stylesheet" href="../bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+    <link rel="stylesheet" href="../dist/css/ArmsAUI.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -112,7 +114,7 @@
     </script>
     <!-- NAVER ANALYTICS END -->
 </head>
-<body class="layout-boxed hold-transition sidebar-mini wysihtml5-supported skin-black-light www313cokrbody">
+<body class="layout-boxed hold-transition sidebar-mini wysihtml5-supported skin-black-light">
 <div class="wrapper">
 
     <header class="main-header" data-include="index/template-header.html"></header>
@@ -135,7 +137,7 @@
                         <!-- /.box-body -->
                         <div class="box-footer box-comments" data-include="index/template-box-comments.html"></div>
                         <!-- /.box-comments -->
-                        <div class="box-footer" data-include="index/template-box-footer.html"></div>
+                        <div class="box-footer"data-include="index/template-box-footer.html"></div>
                         <!-- /.box-footer -->
                     </div>
                     <!-- /.box -->
@@ -154,6 +156,11 @@
 <!-- Control Sidebar -->
 <div class="asideWrapper">
     <aside class="control-sidebar"></aside>
+</div>
+<!-- /.control-sidebar -->
+<!-- Control Sidebar -->
+<div class="leftAsideWrapper">
+    <aside class="leftcontrol-sidebar"></aside>
 </div>
 <!-- /.control-sidebar -->
 
@@ -193,6 +200,19 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
+<!-- JSTREE -->
+<script type="text/javascript" src='../dist/js/jstree-v.pre1.0/_lib/jquery.cookie.js' charset="utf-8"></script>
+<script type="text/javascript" src='../dist/js/jstree-v.pre1.0/_lib/jquery.hotkeys.js' charset="utf-8"></script>
+<script type="text/javascript" src='../dist/js/jstree-v.pre1.0/jquery.jstree.js' charset="utf-8"></script>
+<script type="text/javascript" src='../dist/js/jnotify_v2.1/jquery/jNotify.jquery.min.js' charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="../dist/js/jnotify_v2.1/jquery/jNotify.jquery.css" media="screen"/>
+<!-- dataTable -->
+<link rel="stylesheet" type="text/css" href="../dist/js/DataTables-1.10.16/media/css/jquery.dataTables.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="../dist/js/DataTables-1.10.16/extensions/Responsive/css/responsive.dataTables.css" media="screen"/>
+<script type="text/javascript" src='../dist/js/DataTables-1.10.16/media/js/jquery.dataTables.js' charset="utf-8"></script>
+<script type="text/javascript" src='../dist/js/DataTables-1.10.16/extensions/Responsive/js/dataTables.responsive.js' charset="utf-8"></script>
+<!-- Style Setting -->
+
 <script>
     //<![CDATA[
     $(function () {
@@ -213,23 +233,6 @@
                 self.removeAttr("data-include");
             });
         });
-    }
-
-    $(window).on({
-        resize: function () {
-            setHeightToAsideWrapper();
-        },
-        scroll: function () {
-            setHeightToAsideWrapper();
-        }
-    });
-    function setHeightToAsideWrapper() {
-        if ( $( window ).outerWidth() > 767 ) {
-            var Cheight = $(document).height() - 100;
-            $('.asideWrapper').css({'height':Cheight+'px'});
-        }else{
-            $('.asideWrapper').css({'height':'100%'});
-        }
     }
     //]]>
 </script>
