@@ -7,7 +7,7 @@ module.exports = function (grunt) { // jshint ignore:line
     connect:{
       server: {
         options: {
-          port:333333,
+          port:33333,
           hostname: '*'
         }
       },
