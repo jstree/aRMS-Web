@@ -233,6 +233,23 @@
             });
         });
     }
+
+    $(window).on({
+        resize: function () {
+            setHeightToAsideWrapper();
+        },
+        scroll: function () {
+            setHeightToAsideWrapper();
+        }
+    });
+    function setHeightToAsideWrapper() {
+        if ( $( window ).outerWidth() > 767 ) {
+            var Cheight = $(document).height() - 25;
+            $('.asideWrapper').css({'height':Cheight+'px'});
+        }else{
+            $('.asideWrapper').css({'height':'100%'});
+        }
+    }
     //]]>
 </script>
 
