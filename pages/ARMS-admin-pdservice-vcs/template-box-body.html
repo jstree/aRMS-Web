@@ -110,9 +110,9 @@
                         var isDevelopingToRoute = "";
 
                         //operation enviorment setup and local development configuration
-                        if($(location).attr('port') == 9999){
+                        if($(location).attr('port') == 33333){
                             console.log("csrf 우회 because local development");
-                            isDevelopingToRoute = "http://www.313.co.kr:9999"
+                            isDevelopingToRoute = "http://www.a-rms.net:33333"
                         }else{
                             $.ajax({
                                 async: false,
