@@ -1,0 +1,107 @@
+<div class="row">
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>aRMS Global Permissions</strong></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <div class="font12">&nbsp; These permissions apply to all projects. They are independent of project specific permissions.</div>
+                <div class="font12">&nbsp; If you wish to set permissions </div>
+                <div class="font12">&nbsp; on a project-by-project basis you can set them up in the Permission Schemes.</div>
+                <br>
+                <table class="table table-hover font12">
+                    <tbody><tr>
+                        <th>Permissions</th>
+                        <th>Users / Groups</th>
+                    </tr>
+                    <tr>
+                        <td><strong>aRMS System Administrators</strong><br>
+                            Ability to perform all administration functions. There must be at least one group with this permission.<br>
+                            Note: People with this permission can always log in to aRMS.
+                        </td>
+                        <td>
+                            aRMS-administrators | <a>View Users</a> | <a>Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>aRMS Administrators</strong><br>
+                            Ability to perform most administration functions (excluding Import & Export, SMTP Configuration, etc.).<br>
+                            Note: People with this permission can always log in to aRMS.
+                        </td>
+                        <td>
+                            aRMS-developers | <a>View Users</a> | <a>Delete</a><br>
+                            aRMS-administrators | <a>View Users</a> | <a>Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>aRMS Users</strong><br>
+                            Ability to log in to aRMS. They are a 'user'.<br>
+                            Any new users created will automatically join these groups,<br>
+                            unless those groups have aRMS System Administrators or aRMS Administrators permissions.<br>
+                            Note: All users need this permission to log in to aRMS, even if they have other permissions.
+                        </td>
+                        <td>
+                            aRMS-developers | <a>View Users</a> | <a>Delete</a><br>
+                            aRMS-users | <a>View Users</a> | <a>Delete</a>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>Add Permission</strong></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover font12">
+                    <tbody>
+                    <tr>
+                        <div>
+                            <div class="col-md-6">
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Permission</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="9" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="11">aRMS-administrator</option>
+                                        <option data-select2-id="16">aRMS-developer</option>
+                                        <option disabled="disabled" data-select2-id="17">delete permission (disabled)</option>
+                                        <option data-select2-id="18">aRMS-users</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                            </div>
+                            <div class="col-md-6">
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Groups</label>
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="9" tabindex="-1" aria-hidden="true">
+                                        <option selected="selected" data-select2-id="11">Anyone</option>
+                                        <option data-select2-id="16">test Group1</option>
+                                        <option disabled="disabled" data-select2-id="17">deleted Group (disabled)</option>
+                                        <option data-select2-id="18">LDAP Group</option>
+                                        <option data-select2-id="19">KeyCloak Group</option>
+                                        <option data-select2-id="20">Crowd Group</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-block btn-primary btn-sm">Add Permission</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>
+<!-- /.row -->

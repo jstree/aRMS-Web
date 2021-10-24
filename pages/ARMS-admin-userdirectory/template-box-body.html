@@ -1,0 +1,88 @@
+<div class="row">
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>User Directory</strong></h3>
+
+                <div class="box-tools">
+                    <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <div class="font12">&nbsp; The table below shows the user directories currently configured for aRMS.</div>
+                <div class="font12">&nbsp; The order of the directories is the order in which they will be searched for users and groups.</div>
+                <div class="font12">&nbsp; Changes to users and groups will be made in the first directory where JIRA has permission to make changes.</div>
+                <div class="font12">&nbsp; It is recommended that each user exist only in a single directory.</div>
+                <br>
+                <table class="table table-hover font12">
+                    <tbody><tr>
+                        <th>Directory Name</th>
+                        <th>Type</th>
+                        <th>Order</th>
+                        <th>Operations</th>
+                    </tr>
+                    <tr>
+                        <td><strong>LDAP server ( group users )</strong><br>
+                            You cannot edit this directory<br>
+                            because you are logged in through it<br>
+                            please log in as a locally<br>
+                            authenticating user to edit it.
+                        </td>
+                        <td><strong>OpenLDAP (Read-Only Posix Schema)</strong><br>
+                            (Read Only, with Local Groups)<br>
+                        </td>
+                        <td><span class="aui-icon aui-icon-small aui-iconfont-arrow-up-circle"></span><br>
+                            <span class="aui-icon aui-icon-small aui-iconfont-arrow-down-circle"></span>
+                        </td>
+                        <td><a>Test</a> | <a>Synchronise</a><br>
+                            Last synchronised at 7/11/21 3:37 AM (took 1s).<br>
+                            Full synchronisation completed successfully.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>aRMS Internal Directory</strong></td>
+                        <td><strong>Internal</strong></td>
+                        <td><span class="aui-icon aui-icon-small aui-iconfont-arrow-up-circle"></span><br>
+                            <span class="aui-icon aui-icon-small aui-iconfont-arrow-down-circle"></span>
+                        </td>
+                        <td><a>Edit</a> | <a>Disable</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-block btn-primary btn-sm">Add Directory</button>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>Additional Configuration & Troubleshooting</strong></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover font12">
+                    <tbody>
+                    <tr>
+                        <td><a><strong>Directory Configuration Summary</strong></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>
+<!-- /.row -->

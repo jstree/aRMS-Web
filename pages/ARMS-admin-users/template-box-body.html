@@ -1,0 +1,227 @@
+<div class="row">
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>Filter Users</strong></h3>
+
+                <div class="box-tools">
+                    <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                        <button type="button" class="btn btn-block btn-primary btn-sm">Add User</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>User Name Contains</label>
+                        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Full Name Contains</label>
+                        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Email Contains</label>
+                        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>In Group</label>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="9" tabindex="-1" aria-hidden="true">
+                            <option selected="selected" data-select2-id="11">Anyone</option>
+                            <option data-select2-id="16">test Group1</option>
+                            <option disabled="disabled" data-select2-id="17">deleted Group (disabled)</option>
+                            <option data-select2-id="18">LDAP Group</option>
+                            <option data-select2-id="19">KeyCloak Group</option>
+                            <option data-select2-id="20">Crowd Group</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Users Per Page</label>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="9" tabindex="-1" aria-hidden="true">
+                            <option selected="selected" data-select2-id="11">20</option>
+                            <option data-select2-id="16">40</option>
+                            <option data-select2-id="18">60</option>
+                            <option data-select2-id="19">80</option>
+                            <option data-select2-id="20">100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Filter</label>
+                        <button type="button" class="btn btn-block btn-success btn-sm">Search</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>Displaying users 1 to 4 of 4.</strong></h3>
+
+                <div class="box-tools">
+                    <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover font12">
+                    <tbody><tr>
+                        <th>Username</th>
+                        <th>Full Name</th>
+                        <th>Login Details</th>
+                        <th>Groups</th>
+                        <th>Directory</th>
+                        <th>Operations</th>
+                    </tr>
+                    <tr>
+                        <td>admin
+                        </td>
+                        <td><strong>admin</strong><br>
+                            <a>313cokr@gmail.com</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 44723<br>
+                            <strong>Last:</strong> Today 4:50 AM
+                        </td>
+                        <td>
+                            <a>arms-admin</a><br>
+                            <a>arms-developer</a><br>
+                            <a>bamboo-admin</a><br>
+                            <a>bamboo-user</a><br>
+                            <a>jira-administrators</a><br>
+                            <a>jira-developers</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>dongmin.lee
+                        </td>
+                        <td><strong>dongmin.lee</strong><br>
+                            <a>admin@313.co.kr</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 9927<br>
+                            <strong>Last:</strong> 24/Dec/19 9:46 AM
+                        </td>
+                        <td>
+                            <a>arms-developers</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이혜진
+                        </td>
+                        <td><strong>hyejin.lee</strong><br>
+                            <a>lhj@313.co.kr</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 9798<br>
+                            <strong>Last:</strong> 24/Dec/21 9:46 AM
+                        </td>
+                        <td>
+                            <a>arms-administrator</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>김지원
+                        </td>
+                        <td><strong>g1.kim</strong><br>
+                            <a>g1@313.co.kr</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 9234<br>
+                            <strong>Last:</strong> 24/Dec/21 9:46 AM
+                        </td>
+                        <td>
+                            <a>arms-user</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전옥현
+                        </td>
+                        <td><strong>ok.jeoun</strong><br>
+                            <a>ok@313.co.kr</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 123<br>
+                            <strong>Last:</strong> 24/Dec/21 9:46 AM
+                        </td>
+                        <td>
+                            <a>arms-developer</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>김지연
+                        </td>
+                        <td><strong>jiyun.kim</strong><br>
+                            <a>jiyun@313.co.kr</a><br>
+                        </td>
+                        <td><strong>Count:</strong> 1323<br>
+                            <strong>Last:</strong> 24/Dec/21 9:46 AM
+                        </td>
+                        <td>
+                            <a>arms-developer</a><br>
+                        </td>
+                        <td>
+                            LDAP server<br>
+                            ( group users )
+                        </td>
+                        <td>
+                            <a>Groups</a> | <a>Project Roles</a>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>
+<!-- /.row -->

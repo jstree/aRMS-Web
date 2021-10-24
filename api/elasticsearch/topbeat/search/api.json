@@ -1,0 +1,54 @@
+{
+  "took": 79,
+  "timed_out": false,
+  "_shards": {
+    "total": 31,
+    "successful": 31,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 630,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "2": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "filebeat",
+          "doc_count": 90
+        },
+        {
+          "key": "heartbeat",
+          "doc_count": 90
+        },
+        {
+          "key": "java",
+          "doc_count": 90
+        },
+        {
+          "key": "metricbeat",
+          "doc_count": 90
+        },
+        {
+          "key": "packetbeat",
+          "doc_count": 90
+        },
+        {
+          "key": "sh",
+          "doc_count": 90
+        },
+        {
+          "key": "topbeat",
+          "doc_count": 90
+        }
+      ]
+    }
+  }
+}

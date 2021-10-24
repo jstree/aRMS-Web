@@ -1,0 +1,640 @@
+<div class="row">
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><strong>제품(서비스)- Notification 연동 관리</strong></h3>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+
+                <div class="font12 col-md-4">
+                    <div id="mmenu">
+                        <!--
+                        <button type="button" id="add_folder">
+                            <i class="fa fa-plus"></i>
+                            add folder
+                        </button>
+                        <button type="button" id="add_default">
+                            <i class="fa fa-plus"></i>
+                            add file
+                        </button>
+                        <button type="button" id="rename">
+                            <i class="fa fa-eraser"></i>
+                            rename
+                        </button>
+                        <button type="button" id="remove">
+                            <i class="fa fa-minus"></i>
+                            remove
+                        </button>
+                        <button type="button" id="cut">
+                            <i class="fa fa-cut"></i>
+                            cut
+                        </button>
+                        <button type="button" id="copy">
+                            <i class="fa fa-copy"></i>
+                            copy
+                        </button>
+                        <button type="button" id="paste">
+                            <i class="fa fa-paste"></i>
+                            paste
+                        </button>
+                        <button type="button" id="refresh" title="refresh" onclick="$('#demo').jstree('refresh',-1);">
+                            <i class="fa fa-search"></i>
+                            refresh
+                        </button>
+                        -->
+                        <input type="text" id="text" placeholder="찾을 노드 이름 입력" data-tooltip="Press Enter To Node To Search">
+                        <button type="button" id="search" title="Search">
+                            <i class="fa fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                    <div id="demo" class="jstree jstree-0 jstree-focused jstree-default"><ul><li rel="drive" id="node_2" class="jstree-unchecked jstree-last jstree-open"><ins class="jstree-icon">&nbsp;</ins><a href="#" class=""><ins class="jstree-checkbox">&nbsp;</ins><ins class="jstree-icon">&nbsp;</ins>First Child</a><ul><li rel="folder" id="node_111" class="jstree-closed jstree-unchecked"><ins class="jstree-icon">&nbsp;</ins><a href="#"><ins class="jstree-checkbox">&nbsp;</ins><ins class="jstree-icon" style="background-image: url(&quot;../dist/js/jstree-v.pre1.0/themes/ic_explorer.png&quot;);">&nbsp;</ins>제품</a></li><li rel="folder" id="node_130" class="jstree-closed jstree-last jstree-unchecked"><ins class="jstree-icon">&nbsp;</ins><a href="#"><ins class="jstree-checkbox">&nbsp;</ins><ins class="jstree-icon" style="background-image: url(&quot;../dist/js/jstree-v.pre1.0/themes/ic_explorer.png&quot;);">&nbsp;</ins>서비스</a></li></ul></li></ul></div>
+                    <div id="alog" style="float: left; border: 1px solid gray; padding: 5px; height: 150px; margin-top: 15px; overflow: auto; width: 98%;">분석 결과enable_hotkeys<br>init<br>set_focus<br>is_focused<br>set_theme<br>show_dots<br>show_icons<br>load_node<br>load_node<br>load_node_json<br>clean_node<br>loaded<br>show_dots<br>show_icons<br>reload_nodes<br>load_node<br>load_node<br>load_node_json<br>open_node<br>load_node<br>load_node<br>load_node_json<br>open_node<br>clean_node<br>reload_nodes<br>open_node<br>after_open<br>open_node<br>reopen<br>open_node<br>open_node<br>reselect<br>reselect<br>select_node<br></div>
+                </div>
+
+                <script type="text/javascript">
+                    function jstreeDataTableReload() {
+
+                        console.log("href: "+$(location).attr('href'));
+                        console.log("protocol: "+$(location).attr('protocol'));
+                        console.log("host: "+$(location).attr('host'));
+                        console.log("pathname: "+$(location).attr('pathname'));
+                        console.log("search: "+$(location).attr('search'));
+                        console.log("hostname: "+$(location).attr('hostname'));
+                        console.log("port: "+$(location).attr('port'));
+
+                        var isDevelopingToRoute = "";
+
+                        //operation enviorment setup and local development configuration
+                        if($(location).attr('port') == 9999){
+                            console.log("csrf 우회 because local development");
+                            isDevelopingToRoute = "http://localhost:8082"
+                        }else{
+                            $.ajax({
+                                async: false,
+                                type: 'GET',
+                                url: "/api/jsTreeServiceFramework/security/csrf.do",
+                                success: function(r) {
+                                    var token = r._csrf_token;
+                                    var header = r._csrf_headerName;
+                                    $(document).ajaxSend(function(e, xhr, options) {
+                                        xhr.setRequestHeader(header, token);
+                                    });
+                                }
+                            });
+                        }
+                    }
+
+                    $(function() {
+                        jstreeDataTableReload();
+                    });
+
+                    function jsTreeClick(selectedNodeID) {
+                        console.log(selectedNodeID);
+                    }
+                </script>
+                <script type="text/javascript">
+                    function jsTreeBuild(){
+
+                        console.log("href: "+$(location).attr('href'));
+                        console.log("protocol: "+$(location).attr('protocol'));
+                        console.log("host: "+$(location).attr('host'));
+                        console.log("pathname: "+$(location).attr('pathname'));
+                        console.log("search: "+$(location).attr('search'));
+                        console.log("hostname: "+$(location).attr('hostname'));
+                        console.log("port: "+$(location).attr('port'));
+
+                        var isDevelopingToRoute = "";
+
+                        //operation enviorment setup and local development configuration
+                        if($(location).attr('port') == 9999){
+                            console.log("csrf 우회 because local development");
+                            isDevelopingToRoute = "http://www.313.co.kr:9999"
+                        }else{
+                            $.ajax({
+                                async: false,
+                                type: 'GET',
+                                url: "/api/jsTreeServiceFramework/security/csrf.do",
+                                success: function(r) {
+                                    var token = r._csrf_token;
+                                    var header = r._csrf_headerName;
+                                    $(document).ajaxSend(function(e, xhr, options) {
+                                        xhr.setRequestHeader(header, token);
+                                    });
+                                }
+                            });
+                        }
+
+                        $("#demo").bind(
+                            "before.jstree",
+                            function(e, data) {
+                                $("#alog").append(data.func + "<br />");
+                                $("li:not([rel='drive']).jstree-open > a > .jstree-icon").css('background-image',
+                                    'url(../dist/js/jstree-v.pre1.0/themes/toolbar_open.png)');
+                                $("li:not([rel='drive']).jstree-closed > a > .jstree-icon").css('background-image',
+                                    'url(../dist/js/jstree-v.pre1.0/themes/ic_explorer.png)');
+                            }).jstree({
+                            // List of active plugins
+                            "plugins": ["themes", "json_data", "ui", "crrm", "cookies", "dnd", "search", "types", "hotkeys", "contextmenu", "checkbox"],
+
+                            //contextmenu
+                            "contextmenu": {
+                                items: { // Could be a function that should return an object like this one
+                                    "create": {
+                                        "separator_before": true,
+                                        "separator_after": true,
+                                        "label": "Create",
+                                        "action": false,
+                                        "submenu": {
+                                            "create_file": {
+                                                "seperator_before": false,
+                                                "seperator_after": false,
+                                                "label": "File",
+                                                action: function(obj) {
+                                                    this.create(obj, "last", {
+                                                        "attr": {
+                                                            "rel": "default"
+                                                        }
+                                                    });
+                                                }
+                                            },
+                                            "create_folder": {
+                                                "seperator_before": false,
+                                                "seperator_after": false,
+                                                "label": "Folder",
+                                                action: function(obj) {
+                                                    this.create(obj, "last", {
+                                                        "attr": {
+                                                            "rel": "folder"
+                                                        }
+                                                    });
+                                                }
+                                            }
+
+                                        }
+                                    },
+                                    "ccp": {
+                                        "separator_before": false,
+                                        "separator_after": true,
+                                        "label": "Edit",
+                                        "action": false,
+                                        "submenu": {
+                                            "cut": {
+                                                "seperator_before": false,
+                                                "seperator_after": false,
+                                                "label": "Cut",
+                                                action: function(obj) {
+                                                    this.cut(obj, "last", {
+                                                        "attr": {
+                                                            "rel": "default"
+                                                        }
+                                                    });
+                                                }
+                                            },
+                                            "paste": {
+                                                "seperator_before": false,
+                                                "seperator_after": false,
+                                                "label": "Paste",
+                                                action: function(obj) {
+                                                    this.paste(obj, "last", {
+                                                        "attr": {
+                                                            "rel": "folder"
+                                                        }
+                                                    });
+                                                }
+                                            },
+
+                                            "changeType": {
+                                                "seperator_before": false,
+                                                "seperator_after": false,
+                                                "label": "Change Type",
+                                                "submenu": {
+                                                    "toFile": {
+                                                        "seperator_before": false,
+                                                        "seperator_after": false,
+                                                        "label": "toFile",
+                                                        action: function(obj) {
+                                                            this.set_type("default");
+                                                        }
+                                                    },
+                                                    "toFolder": {
+                                                        "seperator_before": false,
+                                                        "seperator_after": false,
+                                                        "label": "toFolder",
+                                                        action: function(obj) {
+                                                            this.set_type("folder");
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                }
+                            },
+
+                            // I usually configure the plugin that handles the data first
+                            // This example uses JSON as it is most common
+                            "json_data": {
+                                // This tree is ajax enabled - as this is most common, and maybe a bit more complex
+                                // All the options are almost the same as jQuery's AJAX (read the docs)
+                                "ajax": {
+                                    // the URL to fetch the data
+                                    "url": isDevelopingToRoute + "/com/ext/jstree/springiBatis/core/getChildNode.do",
+                                    // the `data` function is executed in the instance's scope
+                                    // the parameter is the node being loaded
+                                    // (may be -1, 0, or undefined when loading the root nodes)
+                                    "data": function(n) {
+                                        // the result is fed to the AJAX request `data` option
+                                        return {
+                                            "c_id": n.attr ? n.attr("id").replace("node_", "").replace("copy_", "") : 1
+                                        };
+                                    },
+                                    "success": function(n) {
+                                        jSuccess('access good');
+                                    }
+                                }
+                            },
+                            // Configuring the search plugin
+                            "search": {
+                                // As this has been a common question - async search
+                                // Same as above - the `ajax` config option is actually jQuery's AJAX object
+                                "ajax": {
+                                    "url": "/com/ext/jstree/springiBatis/core/searchNode.do",
+                                    // You get the search string as a parameter
+                                    "data": function(str) {
+                                        return {
+                                            "searchString": str
+                                        };
+                                    },
+                                    "success": function(n) {
+                                        jSuccess('search data complete');
+                                    }
+                                }
+                            },
+                            // Using types - most of the time this is an overkill
+                            // read the docs carefully to decide whether you need types
+                            "types": {
+                                // I set both options to -2, as I do not need depth and children count checking
+                                // Those two checks may slow jstree a lot, so use only when needed
+                                "max_depth": -2,
+                                "max_children": -2,
+                                // I want only `drive` nodes to be root nodes
+                                // This will prevent moving or creating any other type as a root node
+                                "valid_children": ["drive"],
+                                "types": {
+                                    // The default type
+                                    "default": {
+                                        // I want this type to have no children (so only leaf nodes)
+                                        // In my case - those are files
+                                        "valid_children": "none",
+                                        // If we specify an icon for the default type it WILL OVERRIDE the theme icons
+                                        "icon": {
+                                            "image": "../dist/js/jstree-v.pre1.0/themes/attibutes.png"
+                                        }
+                                    },
+                                    // The `folder` type
+                                    "folder": {
+                                        // can have files and other folders inside of it, but NOT `drive` nodes
+                                        "valid_children": ["default", "folder"],
+                                        "icon": {
+                                            "image": "../dist/js/jstree-v.pre1.0/themes/ic_explorer.png"
+                                        }
+                                    },
+                                    // The `drive` nodes
+                                    "drive": {
+                                        // can have files and folders inside, but NOT other `drive` nodes
+                                        "valid_children": ["default", "folder"],
+                                        "icon": {
+                                            "image": "../dist/js/jstree-v.pre1.0/themes/home.png"
+                                        },
+                                        // those prevent the functions with the same name to be used on `drive` nodes
+                                        // internally the `before` event is used
+                                        "start_drag": false,
+                                        "move_node": false,
+                                        "delete_node": false,
+                                        "remove": false
+                                    }
+                                }
+                            },
+                            // UI & core - the nodes to initially select and open will be overwritten by the cookie plugin
+
+                            // the UI plugin - it handles selecting/deselecting/hovering nodes
+                            "ui": {
+                                // this makes the node with ID node_4 selected onload
+                                "initially_select": ["node_4"]
+                            },
+                            // the core plugin - not many options here
+                            "core": {
+                                // just open those two nodes up
+                                // as this is an AJAX enabled tree, both will be downloaded from the server
+                                "initially_open": ["node_2", "node_3"]
+                            }
+                        }).bind("create.jstree", function(e, data) {
+                            $.post("/com/ext/jstree/springiBatis/core/addNode.do", {
+                                "ref": data.rslt.parent.attr("id").replace("node_", "").replace("copy_", ""),
+                                "c_position": data.rslt.position,
+                                "c_title": data.rslt.name,
+                                "c_type": data.rslt.obj.attr("rel")
+                            }, function(r) {
+                                if (r.status) {
+                                    $(data.rslt.obj).attr("id", "node_" + r.id);
+                                    jNotify('Notification : <strong>Add Node</strong>, Complete !');
+                                } else {
+                                    $.jstree.rollback(data.rlbk);
+                                }
+                                if (typeof Chat != "undefined"){
+                                    Chat.sendMessage("노드를 추가했습니다. 추가된 노드의 아이디는 " + r.id , function(data) {
+                                        console.log(data);
+                                    });
+                                }
+                                jstreeDataTableReload();
+                                jsTreeBuild();
+                            });
+                        }).bind("remove.jstree", function(e, data) {
+                            data.rslt.obj.each(function() {
+                                $.ajax({
+                                    async: false,
+                                    type: 'POST',
+                                    url: "/com/ext/jstree/springiBatis/core/removeNode.do",
+                                    data: {
+                                        "c_id": this.id.replace("node_", "").replace("copy_", "")
+                                    },
+                                    success: function(r) {
+                                        jNotify('Notification : <strong>Remove Node</strong>, Complete !');
+                                        if (typeof Chat != "undefined"){
+                                            Chat.sendMessage("노드를 삭제했습니다. 삭제된 노드의 아이디는 " + r.c_id , function(data) {
+                                                console.log(data);
+                                            });
+                                        }
+                                        jstreeDataTableReload();
+                                        jsTreeBuild();
+                                    }
+                                });
+                            });
+                        }).bind("rename.jstree", function(e, data) {
+                            $.post("/com/ext/jstree/springiBatis/core/alterNode.do", {
+                                "c_id": data.rslt.obj.attr("id").replace("node_", "").replace("copy_", ""),
+                                "c_title": data.rslt.new_name,
+                                "c_type": data.rslt.obj.attr("rel")
+                            }, function(r) {
+                                if (!r.status) {
+                                    $.jstree.rollback(data.rlbk);
+                                }
+                                jSuccess('Rename Node Complete');
+                                if (typeof Chat != "undefined"){
+                                    Chat.sendMessage("노드를 변경했습니다. 변경된 노드의 아이디는 " + r.c_id , function(data) {
+                                        console.log(data);
+                                    });
+                                }
+                                jstreeDataTableReload();
+                                jsTreeBuild();
+                            });
+                        }).bind("set_type.jstree", function(e, data) {
+                            $.post("/com/ext/jstree/springiBatis/core/alterNodeType.do", {
+                                "c_id": data.rslt.obj.attr("id").replace("node_", "").replace("copy_", ""),
+                                "c_title": data.rslt.new_name,
+                                "c_type": data.rslt.obj.attr("rel")
+                            }, function(r) {
+                                jSuccess('Node Type Change');
+                                if (typeof Chat != "undefined"){
+                                    Chat.sendMessage("노드를 변경했습니다. 변경된 노드의 아이디는 " + r.c_id , function(data) {
+                                        console.log(data);
+                                    });
+                                }
+                                jstreeDataTableReload();
+                                jsTreeBuild();
+                            });
+                        }).bind("move_node.jstree", function(e, data) {
+                            data.rslt.o.each(function(i) {
+                                $.ajax({
+                                    async: false,
+                                    type: 'POST',
+                                    url: "/com/ext/jstree/springiBatis/core/moveNode.do",
+                                    data: {
+                                        "c_id": $(this).attr("id").replace("node_", "").replace("copy_", ""),
+                                        "ref": data.rslt.cr === -1 ? 1 : data.rslt.np.attr("id").replace("node_", "").replace("copy_", ""),
+                                        "c_position": data.rslt.cp + i,
+                                        "c_title": data.rslt.name,
+                                        "copy": data.rslt.cy ? 1 : 0,
+                                        "multiCounter": i
+                                    },
+                                    success: function(r) {
+                                        if (r.status) {
+                                            $.jstree.rollback(data.rlbk);
+                                        } else {
+                                            $(data.rslt.oc).attr("id", "node_" + r.id);
+                                            if (data.rslt.cy && $(data.rslt.oc).children("UL").length) {
+                                                data.inst.refresh(data.inst._get_parent(data.rslt.oc));
+                                            }
+                                        }
+                                        jNotify('Notification : <strong>Move Node</strong> Complete !');
+                                        if (typeof Chat != "undefined"){
+                                            Chat.sendMessage("노드가 이동되었습니다. 이동된 노드의 아이디는 " + r.c_id , function(data) {
+                                                console.log(data);
+                                            });
+                                        }
+                                        jstreeDataTableReload();
+                                        jsTreeBuild();
+                                    }
+                                });
+                            });
+                        }).bind("select_node.jstree", function (event, data) {
+                            // `data.rslt.obj` is the jquery extended node that was clicked
+                            if ($.isFunction(jsTreeClick)) {
+                                console.log(data.rslt.obj);
+                                jsTreeClick(data.rslt.obj.attr("id"));
+                            }
+                        }).bind("check_node.jstree", function (event, data) {
+                            var check_node = $.trim(data.rslt.obj[0].innerText);
+                            console.log(check_node);
+                        }).bind("uncheck_node.jstree", function (event, data) {
+                            var check_node = $.trim(data.rslt.obj[0].innerText);
+                            console.log(check_node);
+                        });
+
+                        $("#mmenu input, #mmenu button").click(function() {
+                            switch (this.id) {
+                                case "add_default":
+                                case "add_folder":
+                                    $("#demo").jstree("create", null, "last", {
+                                        "attr": {
+                                            "rel": this.id.toString().replace("add_", "")
+                                        }
+                                    });
+                                    break;
+                                case "search":
+                                    $("#demo").jstree("search", document.getElementById("text").value);
+                                    //$("#jstreeTable_filter").find('input[type="search"]').val();
+                                    $('#jstreeTable').DataTable().column(6).search(document.getElementById("text").value).draw();
+                                    break;
+                                case "text":
+                                    break;
+                                default:
+                                    $("#demo").jstree(this.id);
+                                    break;
+                            }
+                        });
+                    }
+
+                    $(function() {
+                        jsTreeBuild();
+                    });
+                    // Code for the menu buttons
+                </script>
+
+                <div class="col-md-8">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <div class="custom-box-title font13">제품(서비스) Notification 연결</div>
+
+                                <div class="box-tools pull-right">
+                                    <div class="has-feedback">
+                                        <input type="text" class="form-control input-sm" placeholder="Search IssueTrack Project">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <!-- /.box-tools -->
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body no-padding">
+
+                                <p class="text-muted well well-sm no-shadow font13" style="margin-top: 10px;">
+                                    aRMS 의 제품(서비스) - Notification 연결 : 제품(서비스) 선택 -> Noti Tool/Config 선택 -> 연결
+                                </p>
+
+                                <div class="form-group font13">
+                                    <label>Selected Product(service) name</label>
+                                    <input type="text" class="form-control font13" placeholder="aRMS Frontend" disabled="">
+                                </div>
+
+                                <div class="mailbox-controls">
+                                    <!-- Check all button -->
+                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-retweet"></i> 제품(서비스) 연결 </button>
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-plus-square"></i> Notification 연결 추가 </button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <div class="pull-right font12">
+                                        1-50/7313
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                                        </div>
+                                        <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.pull-right -->
+                                </div>
+                                <div class="table-responsive mailbox-messages">
+                                    <table class="table table-hover table-striped font13">
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">Mail</a></td>
+                                            <td class="mailbox-subject"><b>MailName</b> - ConfigName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">sync 5 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">WebHook</a></td>
+                                            <td class="mailbox-subject"><b>ProjectName</b> - ConfigName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">sync 5 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">MS Teams</a></td>
+                                            <td class="mailbox-subject"><b>CompanyName</b> - TeamName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">sync 5 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">SMS</a></td>
+                                            <td class="mailbox-subject"><b>ProjectName</b> - ConfigName
+                                            </td>
+                                            <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                                            <td class="mailbox-date">sync 28 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">Slack</a></td>
+                                            <td class="mailbox-subject"><b>ProjectName</b> - ApplicationName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">5 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">Kakao</a></td>
+                                            <td class="mailbox-subject"><b>ApplicationName</b> - ApiName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">sync 5 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                                            <td class="mailbox-name"><a href="ARMS-req-read.html">Line</a></td>
+                                            <td class="mailbox-subject"><b>ApplicationName</b> - ApiName
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">sync 25 mins ago</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- /.table -->
+                                </div>
+                                <!-- /.mail-box-messages -->
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer no-padding">
+                                <div class="mailbox-controls">
+                                    <!-- Check all button -->
+                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-retweet"></i> 제품(서비스) 연결 </button>
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-plus-square"></i> Notification 연결 추가 </button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <div class="pull-right font12">
+                                        1-50/7313
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                                        </div>
+                                        <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.pull-right -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /. box -->
+                    </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>
+<!-- /.row -->

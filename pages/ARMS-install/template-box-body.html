@@ -1,0 +1,132 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+
+<div class="font11 col-md-8">
+    <div class="boxwhite box-primary">
+        <div class="box-header with-border">
+            <h3 class="arms-title">Scouter APM 설치 방법</h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+            <pre><code class="language-css">
+    -javaagent:/usr/local/tomcat/lib/scouter.agent.jar
+    -Dscouter.config=/usr/local/tomcat/conf/scouter.conf
+    -Dobj_name={사용자 입력값 : 이름}
+            </code></pre>
+            <ul class="list-unstyled font13 lineh165">
+                <li>에이전트 설정 방법
+                    <ul>
+                        <li>aRMS Version의 Scouter Version agent를 원하시는 Path에 위치시켜주세요</li>
+                        <li>Tomcat start.sh 파일 혹은 env.sh 파일에 상기 코드를 삽입합니다.</li>
+                        <li>Boot를 활용하는 경우에는 command에 삽입하여 명령을 실행합니다.</li>
+                    </ul>
+                </li>
+                <li>scouter.conf 설정 방법
+                    <ul>
+                        <li>obj_name={사용자 입력값 : 이름}</li>
+                        <li>net_collector_ip={사용자 입력값 : 서버아이피}</li>
+                        <li>net_collector_udp_port={사용자 입력값 : 포트}</li>
+                        <li>net_collector_tcp_port={사용자 입력값 : 포트}</li>
+                    </ul>
+                </li>
+                <li>{사용자 입력값 : 이름}
+                    <ul>
+                        <li>Socuter Server 에서 모니터링 대상을 구분할 이름값 입니다.</li>
+                        <li>중복값은 데이터가 혼입될 수 있으니 주의하여 주세요</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="font11 col-md-4">
+    <div class="boxwhite box-primary">
+        <div class="box-header with-border">
+            <h3 class="arms-title">Scouter APM 설치 파일</h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+            <pre><code class="language-css">
+<a href="">scouter.agent.jar Download</a>
+<a href="">scouter.conf Download</a>
+<a href="">scouter 공식 사이트</a>
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="font11 col-md-8">
+    <div class="boxwhite box-primary">
+        <div class="box-header with-border">
+            <h3 class="arms-title">Elastic APM 설치 방법</h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+            <pre><code class="language-css">
+    -javaagent:/usr/local/tomcat/lib/elastic-apm-agent.jar
+    -Delastic.apm.service_name={사용자 입력값 : 이름}
+    -Delastic.apm.application_packages={사용자 입력값 : 모니터링 대상 패키지}
+    -Delastic.apm.server_urls={사용자 입력값 : 모니터링 서버 주소}
+            </code></pre>
+            <ul class="list-unstyled font13 lineh165">
+                <li>에이전트 설정 방법
+                    <ul>
+                        <li>aRMS Version의 ELK APM Version agent를 원하시는 Path에 위치시켜주세요</li>
+                        <li>모니터링 할 서비스의 패키지를 설정합니다.</li>
+                        <li>ELK APM 이 설치된 Docker Master Server 를 설정합니다.</li>
+                        <li>Tomcat start.sh 파일 혹은 env.sh 파일에 상기 코드를 삽입합니다.</li>
+                        <li>Boot를 활용하는 경우에는 command에 삽입하여 명령을 실행합니다.</li>
+                    </ul>
+                </li>
+                <li>{사용자 입력값 : 이름}
+                    <ul>
+                        <li>Elasticsearch Server 에서 모니터링 대상을 구분할 이름값 입니다.</li>
+                        <li>중복값은 데이터가 혼입될 수 있으니 주의하여 주세요</li>
+                    </ul>
+                </li>
+                <li>{사용자 입력값 : 모니터링 대상 패키지}
+                    <ul>
+                        <li>서비스 코드 내부의 모니터링 할 대상 패키지를 설정합니다.</li>
+                        <li>대상 패키지는 다중으로 설정 할 수 있습니다.</li>
+                        <li>중복값은 데이터가 혼입될 수 있으니 주의하여 주세요</li>
+                        <li>ex> egovframework.api,egovframework.com ...</li>
+                    </ul>
+                </li>
+                <li>{사용자 입력값 : 모니터링 서버 주소}
+                    <ul>
+                        <li>aRMS의 ELK APM은 Docker Swarm System으로 운용됩니다.</li>
+                        <li>따라서 설치된 Master Server에서 라우팅을 해 주기때문에</li>
+                        <li>Docker Master Server와 Port로 구성된 주소를 설정 해 줍니다.</li>
+                        <li>중복값은 데이터가 혼입될 수 있으니 주의하여 주세요</li>
+                        <li>ex> http://192.168.25.46:8200</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="font11 col-md-4">
+    <div class="boxwhite box-primary">
+        <div class="box-header with-border">
+            <h3 class="arms-title">Elastic APM 설치 파일</h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+            <pre><code class="language-css">
+<a href="">elastic-apm-agent.jar Download</a>
+<a href="">Elastic APM 공식 사이트</a>
+            </code></pre>
+        </div>
+    </div>
+</div>
