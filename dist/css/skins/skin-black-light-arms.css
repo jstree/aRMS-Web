@@ -108,7 +108,7 @@
     background-color: #bcbcbc;
 }
 .skin-black-light .main-sidebar {
-    background-color: #ffffff;
+    background-color: #1d1df1;
 }
 .skin-black-light .user-panel > .info,
 .skin-black-light .user-panel > .info > a {
@@ -127,10 +127,10 @@
 }
 .skin-black-light .sidebar-menu > li:hover > a,
 .skin-black-light .sidebar-menu > li.active > a {
-    color: #000000;
+    color: #ffffff;
 }
 .skin-black-light .sidebar-menu > li.active {
-    border-left-color: #ffffff;
+    border-left-color: #1d1df1;
 }
 .skin-black-light .sidebar-menu > li.active > a {
     font-weight: 600;
@@ -144,11 +144,11 @@
     text-decoration: none;
 }
 .skin-black-light .sidebar-menu .treeview-menu > li > a {
-    color: #777777;
+    color: #ffffff;
 }
 .skin-black-light .sidebar-menu .treeview-menu > li.active > a,
 .skin-black-light .sidebar-menu .treeview-menu > li > a:hover {
-    color: #000000;
+    color: #ebeced;
 }
 .skin-black-light .sidebar-menu .treeview-menu > li.active > a {
     font-weight: 600;
@@ -307,7 +307,7 @@
 
 .admin-sidebar {
     width: 100%;
-    background: #f7f7f7;
+    background: #1d1df1;
     position: absolute;
     bottom: 40px;
 }
