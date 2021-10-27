@@ -1,7 +1,7 @@
 // keycloak object, these details we picked from the JSON downloaded file.
 var keycloakObject = {
     "realm": "arms",
-    "url": "http://www.a-rms.net:8585/auth/",
+    "url": "http://www.313.co.kr:8585/auth/",
     "clientId": "Java-Service-Tree-Framework-aRMS-Client-Web"
 };
 
@@ -13,6 +13,23 @@ keycloak.init({onLoad: 'login-required'}).success(function(authenticated) {
     // console.log(authenticated ? 'authenticated' : 'not authenticated');
     if(authenticated){
         console.log("authenticated keycloak ");
+        keycloak.loadUserProfile()
+            .then(function(profile) {
+                console.log(profile);
+                username = profile.username;
+                $('#user-login').text(username);
+            }).catch(function(){
+                alert("user no profile");
+            });
+
+        keycloak.loadUserInfo()
+            .then(function(info) {
+                console.log(info);
+            }).catch(function(){
+            alert("user no profile");
+
+        })
+        console.log(JSON.stringify(keycloak.tokenParsed));
     }
     else{
         console.log(" not authenticated keycloak");
