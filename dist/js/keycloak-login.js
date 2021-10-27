@@ -17,7 +17,7 @@ keycloak.init({onLoad: 'login-required'}).success(function(authenticated) {
             .then(function(profile) {
                 console.log(profile);
                 username = profile.username;
-                $('#user-login').text(username);
+                $('#user-login').text(username + "님 안녕하세요 " + "Logout");
             }).catch(function(){
                 alert("user no profile");
             });
