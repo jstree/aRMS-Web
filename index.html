@@ -115,55 +115,23 @@
     </script>
     <!-- NAVER ANALYTICS END -->
 </head>
-<body class="hold-transition sidebar-mini wysihtml5-supported skin-black-light">
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
 
-    <header class="main-header" data-include="include/index/template-header.html"></header>
+    <header class="main-header" data-include="include/index/header.html" style="background-color: #1d1df1;">
 
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar" data-include="include/index/template-sidebar.html"></aside>
+    </header>
+    <!-- Full Width Column -->
+    <div class="content-wrapper" data-include="include/index/contents.html" style="background-color: #ebeced;">
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Box Comment -->
-                    <div class="box box-widget">
-                        <div class="box-header with-border" data-include="include/index/template-box-header.html"></div>
-                        <!-- /.box-header -->
-                        <div class="box-body" data-include="include/index/template-box-body.html"></div>
-                        <!-- /.box-body -->
-                        <div class="box-footer box-comments" data-include="include/index/template-box-comments.html"></div>
-                        <!-- /.box-comments -->
-                        <div class="box-footer"data-include="include/index/template-box-footer.html"></div>
-                        <!-- /.box-footer -->
-                    </div>
-                    <!-- /.box -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </section>
-        <!-- /.content -->
-        <footer class="copyrightLayer font12 pull-right" data-include="include/index/template-footer.html"></footer>
     </div>
     <!-- /.content-wrapper -->
+    <footer class="main-footer" data-include="include/index/footer.html">
 
+    </footer>
 </div>
 <!-- ./wrapper -->
-<!-- Control Sidebar -->
-<div class="asideWrapper">
-    <aside class="control-sidebar"></aside>
-</div>
-<!-- /.control-sidebar -->
-<!-- Control Sidebar -->
-<div class="leftAsideWrapper">
-    <aside class="leftcontrol-sidebar"></aside>
-</div>
-<!-- /.control-sidebar -->
 
 <!-- jQuery 3 -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -254,6 +222,5 @@
     }
     //]]>
 </script>
-
 </body>
 </html>

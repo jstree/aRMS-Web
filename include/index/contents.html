@@ -1,0 +1,137 @@
+<style>
+    .breadcrumb {
+        float: right;
+        background: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        padding: 7px 5px;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+    }
+
+    .widget-user .widget-user-header {
+        padding: 20px;
+        height: 310px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    @media(min-width: 767px) {
+        .widget-user .widget-user-username {
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-bottom: 5px;
+            font-size: 25px;
+            font-weight: 300;
+            text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    @media(max-width: 767px) {
+        .widget-user .widget-user-username {
+            margin-top: 50px;
+            margin-left: 0px;
+            margin-bottom: 5px;
+            font-size: 25px;
+            font-weight: 300;
+            text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+        }
+    }
+
+    @media(min-width: 767px) {
+        .widget-user .widget-user-desc {
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+    }
+    @media(max-width: 767px) {
+        .widget-user .widget-user-desc {
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+    }
+
+    .widget-user .widget-user-image > img {
+        width: 250px;
+        height: auto;
+        border: 3px solid #fff;
+    }
+
+    .widget-user .widget-user-image {
+        position: absolute;
+        top: 50px;
+        left: 70%;
+        margin-left: -45px;
+    }
+</style>
+<div class="container">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <b>Atlassian-RMS</b>
+            <small><b>Introduce</b></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Introduce</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+
+            <div class="col-md-12">
+                <!-- Widget: user widget style 1 -->
+                <div class="box box-widget widget-user">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header bg-black" style="background: url('./dist/img/Atlassian-Background.jpg') center center; background-repeat: no-repeat">
+                        <h2 class="widget-user-username"><b>aRMS는<br><br>제품(서비스) 관점의 JIRA 전용 RMS 입니다.</b></h2>
+                        <br>
+                        <h5 class="widget-user-desc">제품(서비스) 중심으로 Jira Project를 분석하고,</h5>
+                        <h5 class="widget-user-desc">제품(서비스) 중심으로 요구사항을 Jira Project 에 전파합니다.</h5>
+                    </div>
+                    <div class="widget-user-image">
+                        <img class="img-circle" src="./dist/img/rts.jpg" alt="User Avatar">
+                    </div>
+                    <div class="box-footer">
+                        <div class="row">
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header">3,200</h5>
+                                    <span class="description-text">SALES</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4 border-right">
+                                <div class="description-block">
+                                    <h5 class="description-header">13,000</h5>
+                                    <span class="description-text">FOLLOWERS</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4">
+                                <div class="description-block">
+                                    <h5 class="description-header">35</h5>
+                                    <span class="description-text">PRODUCTS</span>
+                                </div>
+                                <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+                <!-- /.widget-user -->
+            </div>
+            <!-- col-md-12 -->
+
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.container -->
