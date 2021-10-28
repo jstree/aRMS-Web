@@ -1,0 +1,126 @@
+<style>
+    .aui-header {
+        background: #0747a6;
+        color: #deebff;
+        border-bottom-color: #2e3d54;
+    }
+
+    .aui-header .logo-lg img {
+        border: 0;
+        float: left;
+        max-height: 35px;
+        padding: 12px 5px 0 0;
+    }
+
+    /* optional Container STYLES */
+    .chart { height: 670px; margin: 5px; width: 100%; margin: 5px auto; border: 3px solid #DDD; border-radius: 3px; }
+    .Treant > .node {  }
+    .Treant > p { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: bold; font-size: 12px; }
+    .node-name { font-weight: bold;}
+
+    .nodeExample1 {
+        padding: 2px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: #262626;
+        border: 1px solid #000;
+        width: 200px;
+        font-family: Tahoma;
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    .nodeExample1 img {
+        margin-right:  10px;
+    }
+
+    .Treant > a:link {
+        color: #ffffff;
+    }
+
+    .Treant > a:visited {
+        color: #ffffff;
+    }
+
+    .Treant > a:link:hover {
+        color: #636363;
+    }
+
+    .ps-container .ps-scrollbar-x {
+        position: absolute; /* please don't change 'position' */
+        bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x */
+        height: 8px;
+        background-color: #aaa;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        opacity: 0;
+        filter: alpha(opacity = 0);
+        -webkit-transition: opacity.2s linear;
+        -moz-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+    }
+
+    .ps-container:hover .ps-scrollbar-x {
+        opacity: 0.6;
+        filter: alpha(opacity = 60);
+    }
+
+    .ps-container .ps-scrollbar-x:hover {
+        opacity: 0.9;
+        filter: alpha(opacity = 90);
+        cursor:default;
+    }
+
+    .ps-container .ps-scrollbar-x.in-scrolling {
+        opacity: 0.9;
+        filter: alpha(opacity = 90);
+    }
+
+    .ps-container .ps-scrollbar-y {
+        position: absolute; /* please don't change 'position' */
+        right: 3px; /* there must be 'right' for ps-scrollbar-y */
+        width: 8px;
+        background-color: #aaa;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        opacity: 0;
+        filter: alpha(opacity = 0);
+        -webkit-transition: opacity.2s linear;
+        -moz-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+    }
+
+    .ps-container:hover .ps-scrollbar-y {
+        opacity: 0.6;
+        filter: alpha(opacity = 60);
+    }
+
+    .ps-container .ps-scrollbar-y:hover {
+        opacity: 0.9;
+        filter: alpha(opacity = 90);
+        cursor: default;
+    }
+
+    .ps-container .ps-scrollbar-y.in-scrolling {
+        opacity: 0.9;
+        filter: alpha(opacity = 90);
+    }
+</style>
+    <!-- Logo -->
+    <a href="index.html" class="logo aui-header">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>aRMS</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><img src="../dist/img/ARMS/armsLogo.png" data-aui-responsive-header-index="0"> <b style="float: left; padding: 3px 5px 0 0">Portal</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top aui-header">
+        <!-- Sidebar toggle button-->
+        <a href="#" data-toggle="push-menu" role="button">
+            <img class="menuIcon" src="../dist/img/index/Icon/armsMenu.png">
+        </a>
+        <a href="javascript:keycloak.logout();" id="user-login"  class="login-text font13 pull-right" style="color: #fff">Logout</a>
+    </nav>
