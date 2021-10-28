@@ -52,17 +52,65 @@
         }
     }
 
-    .widget-user .widget-user-image > img {
-        width: 250px;
-        height: auto;
-        border: 3px solid #fff;
+
+    @media(max-width: 767px) {
+        .widget-user .widget-user-image > img {
+            width: 100px;
+            height: auto;
+            border: 3px solid #fff;
+        }
+
+        .widget-user .widget-user-image {
+            position: absolute;
+            top: 260px;
+            left: 50%;
+            margin-left: -45px;
+        }
+    }
+    @media(min-width: 767px) {
+        .widget-user .widget-user-image > img {
+            width: 150px;
+            height: auto;
+            border: 3px solid #fff;
+        }
+
+        .widget-user .widget-user-image {
+            position: absolute;
+            top: 90px;
+            left: 83%;
+            margin-left: -45px;
+        }
+    }
+    @media (min-width: 991px) {
+        .widget-user .widget-user-image > img {
+            width: 250px;
+            height: auto;
+            border: 3px solid #fff;
+        }
+
+        .widget-user .widget-user-image {
+            position: absolute;
+            top: 50px;
+            left: 70%;
+            margin-left: -45px;
+        }
     }
 
-    .widget-user .widget-user-image {
-        position: absolute;
-        top: 50px;
-        left: 70%;
-        margin-left: -45px;
+    .bg-aqua, .callout.callout-info, .alert-info, .label-info, .modal-info .modal-body {
+        background-color: #1162d7 !important;
+    }
+    .callout.callout-info {
+        border-color: #1d1df1;
+    }
+    .callout {
+        border-radius: 3px;
+        margin: 40px 0 20px 0;
+        padding: 15px 30px 15px 15px;
+        border-left: 5px solid #eee;
+    }
+
+    .box.box-primary {
+        border-top-color: #1162d7;
     }
 </style>
 <div class="container">
@@ -79,7 +127,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content" style="margin-top: 20px">
         <div class="row">
 
             <div class="col-md-12">
@@ -99,24 +147,24 @@
                         <div class="row">
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">3,200</h5>
-                                    <span class="description-text">SALES</span>
+                                    <h5 class="description-header">Scope</h5>
+                                    <span class="description-text">제품(서비스)의 요구사항 시작이<br>Jira의 End User까지 공유</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">13,000</h5>
-                                    <span class="description-text">FOLLOWERS</span>
+                                    <h5 class="description-header">Cost</h5>
+                                    <span class="description-text">제품(서비스)의 Jira Project 관계 설정<br>맵핑을 통한 정확한 Fact 통계</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4">
                                 <div class="description-block">
-                                    <h5 class="description-header">35</h5>
-                                    <span class="description-text">PRODUCTS</span>
+                                    <h5 class="description-header">Time</h5>
+                                    <span class="description-text">제품(서비스)의 Jira Version 관계 설정<br>맵핑을 통한 실질적인 진척도 측정</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
@@ -128,9 +176,104 @@
                 <!-- /.widget-user -->
             </div>
             <!-- col-md-12 -->
-
         </div>
         <!-- /.row -->
+
+        <div class="callout callout-info">
+            <h4>aRMS는 Jira를 연결해서, 요구사항을 Project에 전파하고, 제품(서비스)의 상태와 출시일을 결정할 수 있습니다.</h4>
+            <br>
+            <p>Jira는 제품(서비스) 관점이 아니라서, 요구사항의 전파와 제품(서비스)의 출시를 알 수가 없습니다.</p>
+            <p>aRMS의 제품(서비스) 와 Jira Project 의 Mapping 으로, 제품(서비스)의 정확한 상태를 통계화 할 수 있습니다.</p>
+        </div>
+
+        <div class="box box-primary" style="margin-top: 40px">
+            <div class="box-header with-border">
+                <h3 class="box-title" style="font-size: 17px;"><b>aRMS 는 이렇게 여러분을 도울 수 있습니다.</b></h3>
+            </div>
+            <div class="box-body">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1" data-toggle="tab">Tab 1</a></li>
+                        <li><a href="#tab_2" data-toggle="tab">Tab 2</a></li>
+                        <li><a href="#tab_3" data-toggle="tab">Tab 3</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Dropdown <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1">
+                            <b>How to use:</b>
+
+                            <p>Exactly like the original bootstrap tabs except you should use
+                                the custom wrapper <code>.nav-tabs-custom</code> to achieve this style.</p>
+                            A wonderful serenity has taken possession of my entire soul,
+                            like these sweet mornings of spring which I enjoy with my whole heart.
+                            I am alone, and feel the charm of existence in this spot,
+                            which was created for the bliss of souls like mine. I am so happy,
+                            my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                            that I neglect my talents. I should be incapable of drawing a single stroke
+                            at the present moment; and yet I feel that I never was a greater artist than now.
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="tab_2">
+                            The European languages are members of the same family. Their separate existence is a myth.
+                            For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+                            in their grammar, their pronunciation and their most common words. Everyone realizes why a
+                            new common language would be desirable: one could refuse to pay expensive translators. To
+                            achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+                            words. If several languages coalesce, the grammar of the resulting language is more simple
+                            and regular than that of the individual languages.
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="tab_3">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                            like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+        <div class="row" style="margin-top: 40px">
+            <div class="col-md-12">
+                <div class="info-box bg-aqua">
+                    <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Bookmarks</span>
+                        <span class="info-box-number">41,410</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <span class="progress-description">
+                    70% Increase in 30 Days
+                  </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+        </div>
+
     </section>
     <!-- /.content -->
 </div>
