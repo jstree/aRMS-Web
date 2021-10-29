@@ -1,7 +1,7 @@
 // keycloak object, these details we picked from the JSON downloaded file.
 var keycloakObject = {
     "realm": "arms",
-    "url": "http://www.313.co.kr:8585/auth/",
+    "url": "http://www.a-rms.net:8585/auth/",
     "clientId": "Java-Service-Tree-Framework-aRMS-Client-Web"
 };
 
