@@ -7,7 +7,7 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <div class="chart" id="OrganiseChart1"></div>
+                    <div class="chart" id="OrganiseChart-big-commpany"></div>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -20,135 +20,291 @@
 
     <script>
         //<![CDATA[
-        var config = {
-                container: "#OrganiseChart1",
-                rootOrientation:  'WEST', // NORTH || EAST || WEST || SOUTH
-                // levelSeparation: 30,
-                siblingSeparation:   20,
-                subTeeSeparation:    60,
-                scrollbar: "fancy",
+        // fix arrow end issues:
+        // https://github.com/DmitryBaranovskiy/raphael/issues/471
+
+        var chart_config = {
+            chart: {
+                container: "#OrganiseChart-big-commpany",
+                levelSeparation: 45,
+
+                rootOrientation: "WEST",
+
+                nodeAlign: "BOTTOM",
 
                 connectors: {
-                    type: 'step'
+                    type: "step",
+                    style: {
+                        "stroke-width": 2
+                    }
                 },
                 node: {
-                    HTMLclass: 'nodeExample1'
+                    HTMLclass: "big-commpany"
                 }
             },
-            ceo = {
-                text: {
-                    name: "Mark Hill",
-                    title: "Chief executive officer",
-                    contact: "Tel: 01 213 123 134",
-                },
-                image: "../headshots/2.jpg",
-                HTMLid: "ceo"
-            },
 
-            cto = {
-                parent: ceo,
-                text:{
-                    name: "Joe Linux",
-                    title: "Chief Technology Officer",
+            nodeStructure: {
+                text: { name: "aRMS" },
+                connectors: {
+                    style: {
+                        'stroke': '#bbb',
+                        'arrow-end': 'oval-wide-long'
+                    }
                 },
-                stackChildren: true,
-                image: "../headshots/1.jpg",
-                HTMLid: "coo"
-            },
-            cbo = {
-                parent: ceo,
-                text:{
-                    name: "Linda May",
-                    title: "Chief Business Officer",
-                },
-                image: "../headshots/5.jpg",
-                HTMLid: "cbo"
-            },
-            cdo = {
-                parent: ceo,
-                text:{
-                    name: "John Green",
-                    title: "Chief accounting officer",
-                    contact: "Tel: 01 213 123 134",
-                },
-                image: "../headshots/6.jpg",
-                HTMLid: "cdo"
-            },
-            cio = {
-                parent: cto,
-                text:{
-                    name: "Ron Blomquist",
-                    title: "Chief Information Security Officer"
-                },
-                image: "../headshots/8.jpg",
-                HTMLid: "cio"
-            },
-            ciso = {
-                parent: cto,
-                text:{
-                    name: "Michael Rubin",
-                    title: "Chief Innovation Officer",
-                    contact: "we@aregreat.com"
-                },
-                image: "../headshots/9.jpg",
-                HTMLid: "ciso"
-            },
-            cio2 = {
-                parent: cdo,
-                text:{
-                    name: "Erica Reel",
-                    title: "Chief Customer Officer"
-                },
-                link: {
-                    href: "http://www.google.com",
-                    target: "_blank"
-                },
-                image: "../headshots/10.jpg",
-                HTMLid: "cio2"
-            },
-            ciso2 = {
-                parent: cbo,
-                text:{
-                    name: "Alice Lopez",
-                    title: "Chief Communications Officer"
-                },
-                image: "../headshots/7.jpg",
-                HTMLid: "ciso2"
-            },
-            ciso3 = {
-                parent: cbo,
-                text:{
-                    name: "Mary Johnson",
-                    title: "Chief Brand Officer"
-                },
-                image: "../headshots/4.jpg",
-                HTMLid: "ciso2"
-            },
-            ciso4 = {
-                parent: cbo,
-                text:{
-                    name: "Kirk Douglas",
-                    title: "Chief Business Development Officer"
-                },
-                image: "../headshots/11.jpg",
-                HTMLid: "ciso2"
+                children: [
+                    {
+                        text: { name: "제품(서비스) 등록" },
+                        stackChildren: true,
+                        connectors: {
+                            style: {
+                                'stroke': '#8080FF',
+                                'arrow-end': 'block-wide-long'
+                            }
+                        },
+                        children: [
+                            {
+                                text: {name: "제품(서비스) - Jira Project 연관 설정"},
+                                stackChildren: true,
+                                connectors: {
+                                    style: {
+                                        'stroke': '#8080FF',
+                                        'arrow-end': 'block-wide-long'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "제품(서비스) - Jira Project Version 연관 설정"},
+                                        connectors: {
+                                            style: {
+                                                'stroke': '#8080FF',
+                                                'arrow-end': 'block-wide-long'
+                                            }
+                                        },
+                                        children: [
+                                            {
+                                                text: {name: "제품(서비스) 연관 확인"},
+                                                stackChildren: true,
+                                                connectors: {
+                                                    style: {
+                                                        'stroke': '#8080FF',
+                                                        'arrow-end': 'block-wide-long'
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        text: { name: "요구사항 등록" },
+                        stackChildren: true,
+                        connectors: {
+                            style: {
+                                'stroke': '#8080FF',
+                                'arrow-end': 'block-wide-long'
+                            }
+                        },
+                        children: [
+                            {
+                                text: {name: "요구사항 리뷰"},
+                                stackChildren: true,
+                                connectors: {
+                                    style: {
+                                        'stroke': '#8080FF',
+                                        'arrow-end': 'block-wide-long'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "요구사항 승인"},
+                                        connectors: {
+                                            style: {
+                                                'stroke': '#8080FF',
+                                                'arrow-end': 'block-wide-long'
+                                            }
+                                        },
+                                        children: [
+                                            {
+                                                text: {name: "연관 Jira Project 요구사항 전파"},
+                                                stackChildren: true,
+                                                connectors: {
+                                                    style: {
+                                                        'stroke': '#8080FF',
+                                                        'arrow-end': 'block-wide-long'
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        text: { name: "제품(서비스)별 분석" },
+                        connectors: {
+                            style: {
+                                'stroke': '#bbb',
+                                "stroke-dasharray": "- .", //"", "-", ".", "-.", "-..", ". ", "- ", "--", "- .", "--.", "--.."
+                                'arrow-start': 'classic-wide-long'
+                            }
+                        },
+                        children: [
+                            {
+                                text: {name: "범위 (Scope)"},
+                                connectors: {
+                                    style: {
+                                        stroke: "#00CE67"
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "제품 요구사항 수집"}
+                                    },
+                                    {
+                                        pseudo: true,
+                                        connectors: {
+                                            style: {
+                                                stroke: "#00CE67"
+                                            }
+                                        },
+                                        children: [
+                                            {
+                                                text: {name: "요구사항 품질 수집 결과 분석"}
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        text: {name: "요구사항과 연관된 이슈 수집"}
+                                    }
+                                ]
+                            },
+                            {
+                                text: {name: "자원 (Resource)"},
+                                connectors: {
+                                    type: "curve",
+                                    style: {
+                                        stroke: "#50688D"
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "연관 Jira Project User 수집"}
+                                    },
+                                    {
+                                        pseudo: true,
+                                        connectors: {
+                                            style: {
+                                                stroke: "#50688D"
+                                            }
+                                        },
+                                        children: [
+                                            {
+                                                text: {name: "기여도 수집 결과 분석"}
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        text: {name: "연관 Jira Project Issue 수집"}
+                                    }
+                                ]
+                            },
+                            {
+                                text: {name: "시간 (Time)"},
+                                connectors: {
+                                    style: {
+                                        'stroke': '#FF5555'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "연관 Jira Project Version 수집"}
+                                    },
+                                    {
+                                        pseudo: true,
+                                        connectors: {
+                                            style: {
+                                                'stroke': '#FF5555'
+                                            }
+                                        },
+                                        children: [
+                                            {
+                                                text: {name: "진척도 수집 결과 분석"}
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        text: {name: "연관 Jira Issue 수집"}
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        text: { name: "모니터링" },
+                        stackChildren: true,
+                        connectors: {
+                            stackIndent: 30,
+                            style: {
+                                'stroke': '#E3C61A',
+                                'arrow-end': 'block-wide-long'
+                            }
+                        },
+                        children: [
+                            {
+                                text: {name: "Platform"},
+                                connectors: {
+                                    stackIndent: 30,
+                                    style: {
+                                        'stroke': '#E3C61A',
+                                        'arrow-end': 'block-wide-long'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "Docker Swarm Cluster"}
+                                    }
+                                ]
+                            },
+                            {
+                                text: {name: "Application"},
+                                connectors: {
+                                    stackIndent: 30,
+                                    style: {
+                                        'stroke': '#E3C61A',
+                                        'arrow-end': 'block-wide-long'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "aRMS, Proxy, 검색엔진, 인증서버"}
+                                    }
+                                ]
+                            },
+                            {
+                                text: {name: "Database"},
+                                connectors: {
+                                    stackIndent: 30,
+                                    style: {
+                                        'stroke': '#E3C61A',
+                                        'arrow-end': 'block-wide-long'
+                                    }
+                                },
+                                children: [
+                                    {
+                                        text: {name: "Oracle, Redis, Mysql"}
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
-
-        ALTERNATIVE = [
-            config,
-            ceo,
-            cto,
-            cbo,
-            cdo,
-            cio,
-            ciso,
-            cio2,
-            ciso2,
-            ciso3,
-            ciso4
-        ];
+        };
         //]]>
     </script>
     <script>
-        new Treant( ALTERNATIVE );
+        new Treant( chart_config );
     </script>

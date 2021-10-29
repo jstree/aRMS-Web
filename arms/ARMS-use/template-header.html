@@ -13,38 +13,35 @@
     }
 
     /* optional Container STYLES */
-    .chart { height: 670px; margin: 5px; width: 100%; margin: 5px auto; border: 3px solid #DDD; border-radius: 3px; }
-    .Treant > .node {  }
-    .Treant > p { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: bold; font-size: 12px; }
-    .node-name { font-weight: bold;}
+    .chart { height: 700px; width: 100%; margin: 5px; margin: 15px auto; border: 3px solid #DDD; border-radius: 3px; }
 
-    .nodeExample1 {
-        padding: 2px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        background-color: #262626;
-        border: 1px solid #000;
-        width: 200px;
-        font-family: Tahoma;
-        font-size: 12px;
-        color: #ffffff;
+    .node { font-size: 13px; }
+
+    .node.big-commpany {
+        cursor: pointer;
+        padding: 0 2px;
+        min-width: 60px;
+        text-align: center;
+        height: 30px;
+        border: 2px solid #E8E8E3;
+        border-radius: 2px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+        background: #fff;
+    }
+    .node.big-commpany:active {
+        box-shadow: inset 1px 1px 1px rgba(0,0,0,.1);
+        margin: 1px 0 0 1px;
+        border: 2px solid #D3D3CB;
     }
 
-    .nodeExample1 img {
-        margin-right:  10px;
+    .node.big-commpany .node-name {
+        line-height: 30px;
+        color: #000000;
     }
 
-    .Treant > a:link {
-        color: #ffffff;
-    }
-
-    .Treant > a:visited {
-        color: #ffffff;
-    }
-
-    .Treant > a:link:hover {
-        color: #636363;
+    .node.big-commpany:hover .node-name {
+        color: #8B8B8B;
+        text-shadow: 1px 1px rgba(0,0,0,.15);
     }
 
     .ps-container .ps-scrollbar-x {
