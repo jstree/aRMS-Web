@@ -1,0 +1,55 @@
+<style>
+    .aui-header {
+        background: #0747a6;
+        color: #deebff;
+        border-bottom-color: #2e3d54;
+    }
+
+    .aui-header .logo-lg img {
+        border: 0;
+        float: left;
+        max-height: 35px;
+        padding: 12px 5px 0 0;
+    }
+    /* optional Container STYLES */
+    .chart { height: 600px; width: 100%; margin: 5px; margin: 15px auto; border: 3px solid #DDD; border-radius: 3px; }
+
+    .tennis-draw {
+        font-size: 13px;
+        width: 100px;
+    }
+
+    .tennis-draw.winner { height: 38px; }
+    .tennis-draw.winner:hover { background: url('trophy.png') right 0 no-repeat; }
+    .tennis-draw.winner .node-name { padding-left: 10px; margin-top: 1px; display: block; }
+
+    .tennis-draw .node-name { white-space: pre; color: #00AFF0; }
+    .tennis-draw .node-desc { padding: 2px; color: #999; }
+
+    .tennis-draw.first-draw .node-title,
+    .tennis-draw.first-draw .node-name,
+    .tennis-draw.first-draw img { position: absolute; top: -8px; }
+    .tennis-draw.first-draw:hover img { width: 20px; top: -12px; }
+
+    .tennis-draw.first-draw { width: 165px; height: 20px; }
+    .tennis-draw.first-draw img { margin: 3px 4px 0 0; left: 25px; }
+    .tennis-draw.first-draw .node-title { margin-top: 0px; left: -15px }
+    .tennis-draw.first-draw .node-name { width: 113px; padding-left: 50px; }
+    .tennis-draw.first-draw.bye .node-name { color: #999; }
+
+</style>
+    <!-- Logo -->
+    <a href="index.html" class="logo aui-header">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>aRMS</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><img src="../dist/img/ARMS/armsLogo.png" data-aui-responsive-header-index="0"> <b style="float: left; padding: 3px 5px 0 0">Portal</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top aui-header">
+        <!-- Sidebar toggle button-->
+        <a href="#" data-toggle="push-menu" role="button">
+            <img class="menuIcon" src="../dist/img/index/Icon/armsMenu.png">
+        </a>
+        <a href="javascript:keycloak.logout();" id="user-login"  class="login-text font13 pull-right" style="color: #fff">Logout</a>
+    </nav>
