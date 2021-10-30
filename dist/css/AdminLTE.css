@@ -532,6 +532,7 @@ a:focus {
 .sidebar {
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-right: 3px;
 }
 .sidebar-form input:focus {
   border-color: transparent;
@@ -699,7 +700,7 @@ a:focus {
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
   display: block !important;
   position: absolute;
-  width: 180px;
+  width: 230px;
   left: 50px;
 }
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > a > span {
@@ -721,7 +722,7 @@ a:focus {
 }
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
   top: 44px;
-  margin-left: 0;
+  margin-left: 3px;
 }
 .sidebar-expanded-on-hover .main-footer,
 .sidebar-expanded-on-hover .content-wrapper {
