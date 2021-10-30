@@ -517,11 +517,11 @@
         <div class="col-md-9">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title font13">제품(서비스)의 요구사항 리뷰/승인 조회</h3>
+                    <h3 class="box-title font13">제품(서비스) - Jira Project 멤버 구분</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <div class="chart" id="OrganiseChart6"></div>
+                    <div class="chart" id="OrganiseChart1"></div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
@@ -540,107 +540,125 @@
         // source:
         // http://www.atpworldtour.com/Share/Event-Draws.aspx?EventId=410&Year=2013
 
-        var tree_structure = {
-            chart: {
-                container: "#OrganiseChart6",
-                levelSeparation:    20,
-                siblingSeparation:  15,
-                subTeeSeparation:   15,
-                rootOrientation: "EAST",
+        var config = {
+                container: "#OrganiseChart1",
+                rootOrientation:  'NORTH', // NORTH || EAST || WEST || SOUTH
+                hideRootNode: true,
+                // levelSeparation: 30,
+                siblingSeparation:   40,
+                subTeeSeparation:    30,
 
-                node: {
-                    HTMLclass: "tennis-draw",
-                    drawLineThrough: true
-                },
                 connectors: {
-                    type: "straight",
-                    style: {
-                        "stroke-width": 2,
-                        "stroke": "#ccc"
-                    }
+                    type: 'curve'
+                },
+                node: {
+                    HTMLclass: 'nodeExample1'
                 }
             },
+            root = {},
 
-            nodeStructure: {
-                text: {
-                    name: {val: "aRMS Product", href: "http://www.313.co.kr/jira"}
+            cto = {
+                parent: root,
+                text:{
+                    name: "Joe Linux",
+                    title: "Board member",
+                    contact: "email: we@aregreat.com"
                 },
-                HTMLclass: "winner",
-                text: {
-                    name: "aRMS Product",
-                    desc: "v. 1.0.0"
+                stackChildren: true,
+                HTMLid: "coo"
+            },
+            cbo = {
+                parent: root,
+                stackChildren: true,
+                text:{
+                    name: "Linda May",
+                    title: "Board member",
+                    contact: "email: we@aregreat.com"
                 },
-                children: [
-                    {
-                        text: {
-                            name: "Docker Swarm",
-                            title: "개발"
-                        },
-                        image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                        HTMLclass: "first-draw",
-
-                    },
-                    {
-                        text: {
-                            name: "DevOps",
-                            title: "개발"
-                        },
-                        image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                        HTMLclass: "first-draw"
-                    },
-                    {
-                        text: {
-                            name: "UI/UX",
-                            title: "디자인"
-                        },
-                        image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                        HTMLclass: "first-draw"
-                    },
-                    {
-                        text: {
-                            name: "Database",
-                            title: "운영"
-                        },
-                        image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                        HTMLclass: "first-draw"
-                    },
-                    {
-                        text: {
-                            name: "PMO",
-                            title: "운영"
-                        },
-                        image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                        HTMLclass: "first-draw"
-                    },
-                    {
-                        text: {
-                            name: "Java 개발팀",
-                            desc: "개발"
-                        },
-                        children: [
-                            {
-                                text: {
-                                    name: "JSTF 개발",
-                                    title: "개발"
-                                },
-                                image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                                HTMLclass: "first-draw"
-                            },
-                            {
-                                text: {
-                                    name: "Proxy 개발",
-                                    title: "개발"
-                                },
-                                image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                                HTMLclass: "first-draw"
-                            }
-                        ]
-                    }
-                ]
+                HTMLid: "cbo"
+            },
+            cdo = {
+                parent: root,
+                text:{
+                    name: "John Green",
+                    title: "Board member, CEO",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "cdo"
+            },
+            cio = {
+                parent: cto,
+                text:{
+                    name: "Ron Blomquist",
+                    title: "Chief Information Security Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "cio"
+            },
+            ciso = {
+                parent: cto,
+                text:{
+                    name: "Michael Rubin",
+                    title: "Chief Innovation Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "ciso"
+            },
+            cio2 = {
+                parent: cdo,
+                text:{
+                    name: "Erica Reel",
+                    title: "Chief Customer Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                link: {
+                    href: "www.google.com"
+                },
+                HTMLid: "cio2"
+            },
+            ciso2 = {
+                parent: cbo,
+                text:{
+                    name: "Alice Lopez",
+                    title: "Chief Communications Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "ciso2"
+            },
+            ciso3 = {
+                parent: cbo,
+                text:{
+                    name: "Mary Johnson",
+                    title: "Chief Brand Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "ciso2"
+            },
+            ciso4 = {
+                parent: cbo,
+                text:{
+                    name: "Kirk Douglas",
+                    title: "Chief Business Development Officer",
+                    contact: "email: we@aregreat.com"
+                },
+                HTMLid: "ciso2"
             }
-        };
+
+        ALTERNATIVE = [
+            config,
+            root,
+            cto,
+            cbo,
+            cdo,
+            cio,
+            ciso,
+            cio2,
+            ciso2,
+            ciso3,
+            ciso4
+        ];
         //]]>
     </script>
     <script>
-        new Treant( tree_structure );
+        new Treant(ALTERNATIVE);
     </script>
