@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>Atlassian RMS</title>
 
     <meta charset="utf-8">
@@ -75,15 +76,14 @@
     <link rel="stylesheet" href="../bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <!-- fullCalendar -->
-    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.css">
-    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.print.css" media="print">
 
     <link rel="stylesheet" href="../dist/css/ArmsAUI.css">
 
     <!--keycloak -->
     <script type="text/javascript" src='../dist/js/keycloak.js' charset="utf-8"></script>
     <script type="text/javascript" src='../dist/js/keycloak-login.js' charset="utf-8"></script>
+
+    <link rel="stylesheet" href="../dist/js/treant-js-1.0/Treant.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -123,10 +123,10 @@
 <body class="hold-transition sidebar-mini wysihtml5-supported skin-black-light">
 <div class="wrapper">
 
-    <header class="main-header" data-include="ARMS-pdservice-monthly-report/template-header.html"></header>
+    <header class="main-header" data-include="ARMS-analysis-map-jira/template-header.html"></header>
 
     <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar" data-include="ARMS-pdservice-monthly-report/template-sidebar.html"></aside>
+    <aside class="main-sidebar" data-include="ARMS-analysis-map-jira/template-sidebar.html"></aside>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -137,13 +137,13 @@
                 <div class="col-md-12">
                     <!-- Box Comment -->
                     <div class="box box-widget">
-                        <div class="box-header with-border" data-include="ARMS-pdservice-monthly-report/template-box-header.html"></div>
+                        <div class="box-header with-border" data-include="ARMS-analysis-map-jira/template-box-header.html"></div>
                         <!-- /.box-header -->
-                        <div class="box-body" data-include="ARMS-pdservice-monthly-report/template-box-body.html"></div>
+                        <div class="box-body" data-include="ARMS-analysis-map-jira/template-box-body.html"></div>
                         <!-- /.box-body -->
-                        <div class="box-footer box-comments" data-include="ARMS-pdservice-monthly-report/template-box-comments.html"></div>
+                        <div class="box-footer box-comments" data-include="ARMS-analysis-map-jira/template-box-comments.html"></div>
                         <!-- /.box-comments -->
-                        <div class="box-footer"data-include="ARMS-pdservice-monthly-report/template-box-footer.html"></div>
+                        <div class="box-footer"data-include="ARMS-analysis-map-jira/template-box-footer.html"></div>
                         <!-- /.box-footer -->
                     </div>
                     <!-- /.box -->
@@ -153,7 +153,7 @@
             <!-- /.row -->
         </section>
         <!-- /.content -->
-        <footer class="copyrightLayer font12 pull-right" data-include="ARMS-pdservice-monthly-report/template-footer.html"></footer>
+        <footer class="copyrightLayer font12 pull-right" data-include="ARMS-analysis-map-jira/template-footer.html"></footer>
     </div>
     <!-- /.content-wrapper -->
 
@@ -201,17 +201,10 @@
 <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- fullCalendar -->
-<script src="../bower_components/moment/moment.js"></script>
-<script src="../bower_components/fullcalendar/dist/fullcalendar.js"></script>
-
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
-
-<!-- Bootstrap WYSIHTML5 -->
-<script src="../plugins/iCheck/icheck.min.js"></script>
 
 <!-- JSTREE -->
 <script type="text/javascript" src='../dist/js/jstree-v.pre1.0/_lib/jquery.cookie.js' charset="utf-8"></script>
@@ -226,6 +219,8 @@
 <script type="text/javascript" src='../dist/js/DataTables-1.10.16/extensions/Responsive/js/dataTables.responsive.js' charset="utf-8"></script>
 <!-- Style Setting -->
 
+<script src="../dist/js/treant-js-1.0/vendor/raphael.js"></script>
+<script src="../dist/js/treant-js-1.0/Treant.js"></script>
 
 <script>
     //<![CDATA[
@@ -236,7 +231,6 @@
             $(this).parent().siblings().removeClass("active")
             $(this).parent().addClass("active");
         });
-
     });
     function includeLayout() {
         var includeArea = $('[data-include]');
