@@ -1,12 +1,12 @@
 <div class="row">
 
     <div class="col-md-12">
-        <div class="box box box-primary">
+        <div class="box box box-primary collapsed-box" style="padding-bottom: 3px">
             <div class="box-header with-border">
-                <h3 class="box-title"><b>aRMS 전체 프로세스 차트</b></h3>
+                <h3 class="box-title"><b>aRMS Flow Chart</b></h3>
 
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
                     </button>
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
                     </button>
@@ -69,613 +69,639 @@
         border-bottom-color: #2e3d54;
     }
 </style>
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">GC Count</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row" style="padding-top: 10px; border-top: 2px dotted #3c8dbc;">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">GC Count</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain009.png" width="100%">
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain009.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li><strong>Garbage Collection 횟수</strong>를 의미합니다.</li>
+                            <li><strong>Garbage Collection 이란</strong> 바로 "Stop-The-World"입니다.</li>
+                            <li><strong>Stop-The-World 란,</strong> GC를 실행하기 위해 JVM이 어플리케이션 실행을 멈추는 것입니다.</li>
+                            <li><strong>Stop-The-World 가 발생하면,</strong> GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업을 멈추게 됩니다.</li>
+                            <li><strong>GC 작업을 완료한 이후에야,</strong> 이후에야 중단했던 작업을 다시 시작합니다.</li>
+                            <li><strong>어떠한 종류의 GC 알고리즘</strong>을 사용하더라도 Stop-The-World는 발생합니다.</li>
+                            <li>따라서, <strong>Garbage Collection 횟수</strong>는 자바 어플리케이션의 운영상 성능 요건에 부합합니다.</li>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">GC Time</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li><strong>Garbage Collection 횟수</strong>를 의미합니다.</li>
-                        <li><strong>Garbage Collection 이란</strong> 바로 "Stop-The-World"입니다.</li>
-                        <li><strong>Stop-The-World 란,</strong> GC를 실행하기 위해 JVM이 어플리케이션 실행을 멈추는 것입니다.</li>
-                        <li><strong>Stop-The-World 가 발생하면,</strong> GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업을 멈추게 됩니다.</li>
-                        <li><strong>GC 작업을 완료한 이후에야,</strong> 이후에야 중단했던 작업을 다시 시작합니다.</li>
-                        <li><strong>어떠한 종류의 GC 알고리즘</strong>을 사용하더라도 Stop-The-World는 발생합니다.</li>
-                        <li>따라서, <strong>Garbage Collection 횟수</strong>는 자바 어플리케이션의 운영상 성능 요건에 부합합니다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain011.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li><strong>Garbage Collection 실행 시간</strong>을 의미합니다.</li>
+                            <li>Java는 프로그램 코드에서 <strong>메모리를 명시적으로 지정하여 해제하지 않는다.</strong></li>
+                            <li>Java에서는 개발자가 프로그램 코드로 메모리를 명시적으로 해제하지 않기 때문에</li>
+                            <li>가비지 컬렉터(Garbage Collector)가 <strong>더 이상 필요 없는(쓰레기) 객체를 찾아 지우는 작업</strong>을 한다.</li>
+                                <ul>
+                                    <li>대부분의 객체는 금방 접근 불가능한 상태(unreachable)가 된다.</li>
+                                    <li>오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재한다.</li>
+                                </ul>
+                            <li>따라서, <strong>Garbage Collection 실행 시간</strong>은 자바 어플리케이션이 멈추고 운용되지 않는 시간을 의미한다.</li>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">GC Time</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">Perm Used</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain011.png" width="100%">
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain010.png" width="100%">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li><strong>Garbage Collection 실행 시간</strong>을 의미합니다.</li>
-                        <li>Java는 프로그램 코드에서 <strong>메모리를 명시적으로 지정하여 해제하지 않는다.</strong></li>
-                        <li>Java에서는 개발자가 프로그램 코드로 메모리를 명시적으로 해제하지 않기 때문에</li>
-                        <li>가비지 컬렉터(Garbage Collector)가 <strong>더 이상 필요 없는(쓰레기) 객체를 찾아 지우는 작업</strong>을 한다.</li>
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>Java Memory를 <strong>HotSpot VM</strong>이라 칭합니다.</li>
+                            <li>HotSpot VM은 크게 2개로 물리적 공간을 나누었고, 이것이 Young 영역과 Old 영역이다.</li>
                             <ul>
-                                <li>대부분의 객체는 금방 접근 불가능한 상태(unreachable)가 된다.</li>
-                                <li>오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재한다.</li>
+                                <li>Young 영역(Young Generation 영역) : 새롭게 생성한 객체의 대부분이 여기에 위치한다. 이 영역에서 객체가 사라질때 Minor GC가 발생했다고 한다.</li>
+                                <li>Old 영역(Old Generation 영역) : 접근 불가능 상태로 되지 않아 Young 영역에서 살아남은 객체가 여기로 복사된다. 이 영역에서 객체가 사라질 때 Major GC(혹은 Full GC)가 발생한다고 한다.</li>
                             </ul>
-                        <li>따라서, <strong>Garbage Collection 실행 시간</strong>은 자바 어플리케이션이 멈추고 운용되지 않는 시간을 의미한다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">Perm Used</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain010.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>Java Memory를 <strong>HotSpot VM</strong>이라 칭합니다.</li>
-                        <li>HotSpot VM은 크게 2개로 물리적 공간을 나누었고, 이것이 Young 영역과 Old 영역이다.</li>
-                        <ul>
-                            <li>Young 영역(Young Generation 영역) : 새롭게 생성한 객체의 대부분이 여기에 위치한다. 이 영역에서 객체가 사라질때 Minor GC가 발생했다고 한다.</li>
-                            <li>Old 영역(Old Generation 영역) : 접근 불가능 상태로 되지 않아 Young 영역에서 살아남은 객체가 여기로 복사된다. 이 영역에서 객체가 사라질 때 Major GC(혹은 Full GC)가 발생한다고 한다.</li>
+                            <li>아래 그림의 Permanent Generation 영역(이하 Perm 영역)은 Method Area라고도 한다.</li>
+                            <li>객체나 억류(intern)된 문자열 정보를 저장하는 곳이며, Old 영역에서 살아남은 객체가 영원히 남아 있는 곳은 절대 아니다.</li>
+                            <li>따라서 Perm 의 데이터는 Static, Class, Meta Data의 증가와 연계되어 있다.</li>
                         </ul>
-                        <li>아래 그림의 Permanent Generation 영역(이하 Perm 영역)은 Method Area라고도 한다.</li>
-                        <li>객체나 억류(intern)된 문자열 정보를 저장하는 곳이며, Old 영역에서 살아남은 객체가 영원히 남아 있는 곳은 절대 아니다.</li>
-                        <li>따라서 Perm 의 데이터는 Static, Class, Meta Data의 증가와 연계되어 있다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-                <!--
-                <li>GC 영역별 데이터 흐름도
-                    <ul>
-                        <li>
-                            <div class="font11 col-md-6">
-                                <img src="../dist/img/ARMS/helloworld-1329-1.png" width="100%">
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                -->
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">TPS</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain012.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>TPS란 Transaction Per Second의 약자입니다.</li>
-                        <li>TPS는 그 시스템이 자신이 할 수 있는 한도내에서 초당 몇개를 해 낼 수 있느냐를 검사하는 것이다.</li>
-                        <li>TPS는 검사 시 Active User와 연관되어 있다.</li>
+                    </li>
+                    <li>X축
                         <ul>
-                            <li>Active User의 수를 늘렸을때, 일반적으로 TPS는 선형적(Linear)하게 증가하게 된다.</li>
-                            <li>하지만, 어느 시점에서는 TPS가 변동이 없을때가, 이 지점이 시스템의 최대 TPS가 되는 것이다.</li>
-                            <li>이때 최고의 TPS를 나타내는 최초의 Active Client의 수를 Saturation Point(임계점) 이라고 한다.</li>
-                            <li>또한 임계점을 중심으로 시스템이 할 수 있는 최대의 TPS의 직전단계를 Light-Load Zone이라고 한다.</li>
-                            <li>이 구간에서의 평균 응답 시간은 일정하게 유지한다.</li>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
                         </ul>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">Heap Total</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain013.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>Total Heap Size = S0C + S1C + EC + OC 이다.</li>
+                    </li>
+                    <!--
+                    <li>GC 영역별 데이터 흐름도
                         <ul>
-                            <li>S0C :: Current survivor space 0 capacity (KB)</li>
-                            <li>S1C :: Current survivor space 1 capacity (KB)</li>
-                            <li>EC :: Current eden space capacity (KB)</li>
-                            <li>OC :: Current old space capacity (KB)</li>
+                            <li>
+                                <div class="font11 col-md-6">
+                                    <img src="../dist/img/ARMS/helloworld-1329-1.png" width="100%">
+                                </div>
+                            </li>
                         </ul>
-                        <li>Total Heap size 계산은 JVM 내부 메모리 관리를 위해서 Code Cache라는 이름으로 50Mb 정도의 공간을 추가로 사용한다.</li>
-                        <li>즉, 전체 heap 크기는 아래와 같이 계산된다.</li>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">TPS</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain012.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
                         <ul>
-                            <li>초기 크기 = -Xms + -XX:PermSize + ~50Mb</li>
-                            <li>최대 크기 = -Xmx + -XX:MaxPermSize + ~50Mb</li>
+                            <li>TPS란 Transaction Per Second의 약자입니다.</li>
+                            <li>TPS는 그 시스템이 자신이 할 수 있는 한도내에서 초당 몇개를 해 낼 수 있느냐를 검사하는 것이다.</li>
+                            <li>TPS는 검사 시 Active User와 연관되어 있다.</li>
+                            <ul>
+                                <li>Active User의 수를 늘렸을때, 일반적으로 TPS는 선형적(Linear)하게 증가하게 된다.</li>
+                                <li>하지만, 어느 시점에서는 TPS가 변동이 없을때가, 이 지점이 시스템의 최대 TPS가 되는 것이다.</li>
+                                <li>이때 최고의 TPS를 나타내는 최초의 Active Client의 수를 Saturation Point(임계점) 이라고 한다.</li>
+                                <li>또한 임계점을 중심으로 시스템이 할 수 있는 최대의 TPS의 직전단계를 Light-Load Zone이라고 한다.</li>
+                                <li>이 구간에서의 평균 응답 시간은 일정하게 유지한다.</li>
+                            </ul>
                         </ul>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">Heap Used</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain014.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>Used Heap Size = S0U + S1U + EU + OU 이다.</li>
+                    </li>
+                    <li>X축
                         <ul>
-                            <li>S0U :: Survivor space 0 utilization (KB)</li>
-                            <li>S1U :: Survivor space 1 utilization (KB)</li>
-                            <li>EU :: Eden space utilization (KB)</li>
-                            <li>OU :: Old space utilization (KB)</li>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
                         </ul>
-                        <li>즉 Used Heap의 의미는 현재 Java 객체가 차지하는 메모리 양입니다</li>
-                        <li>Working Set은 Heap에 살아있는 객체들의 총량을 나타낸다.</li>
-                        <li>JVM의 관점에서 Used Memory는 Working Set과 Garabage이고 Free Memory는 (현재 Heap 크기 - Used Memory) 이다.</li>
-                        <li>만약, -Xms < -Xmx 이고 Used Memory와 현재 힙 크키가 같으면, JVM은 full gc를 한 후에 힙을 키운다.</li>
-                        <li>그러나 -Xms와 -Xmx가 같다면 힙은 더이상 커지지 않는다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">Service Monitor</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">Heap Total</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain015.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>각개의 Service 개수를 표시합니다.</li>
-                        <li>Service는 수집된 데이터의 Hash값에 의존하지 않습니다.</li>
-                        <li>Service는 수집된 데이터의 Service Name의 고유값에 따라 변동됩니다.</li>
-                        <li>따라서, Service Monitor Count는 클러스터 기반의 서비스 인스턴스 개수를 확인하는 용도이며,</li>
-                        <li>HA 구성의 서비스를 모니터링 하거나, 단일 Standalone 서비스라면 Heartbeat 용도의 모니터링 데이터이다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain013.png" width="100%">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">TopBeat</h3>
-        </div>
-        <!-- /.box-header -->
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain016.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>topbeat는 이름으로 알 수 있듯이, </li>
-                        <li>현재 서버의 동작중인 프로세스당 cpu, memory, disk 와 같은 리소스의 점유율 데이터 매트릭스 입니다.</li>
-                        <li>aRMS는 데이터 수집 상태를 표시하기때문에</li>
-                        <li>하기는 HeartBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기합니다.</li>
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
                         <ul>
-                            <li>system: 전체적인 사용 상태를 수집합니다(system load, cpu useage, memory useage, swap useage)</li>
-                            <li>process: 프로세스별 분석데이터를 수집합니다. (process name, parent pid, state, pid, cpu useage, memory useage)</li>
-                            <li>filesystem: 파일시스템 분석데이터를 수집합니다.(마운트된 디스크의 총량, 사용량, 각 디스크의 이름, 마운트위치 등)</li>
-                            <li>cpu_per_core: core별 cpu 사용량을 수집합니다. 기본값은 false(사용안함) 입니다.</li>
+                            <li>Total Heap Size = S0C + S1C + EC + OC 이다.</li>
+                            <ul>
+                                <li>S0C :: Current survivor space 0 capacity (KB)</li>
+                                <li>S1C :: Current survivor space 1 capacity (KB)</li>
+                                <li>EC :: Current eden space capacity (KB)</li>
+                                <li>OC :: Current old space capacity (KB)</li>
+                            </ul>
+                            <li>Total Heap size 계산은 JVM 내부 메모리 관리를 위해서 Code Cache라는 이름으로 50Mb 정도의 공간을 추가로 사용한다.</li>
+                            <li>즉, 전체 heap 크기는 아래와 같이 계산된다.</li>
+                            <ul>
+                                <li>초기 크기 = -Xms + -XX:PermSize + ~50Mb</li>
+                                <li>최대 크기 = -Xmx + -XX:MaxPermSize + ~50Mb</li>
+                            </ul>
                         </ul>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">MetricBeat</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain018.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>MetricBeat는 TopBeat와 달리 status를 확장한 서버의 CPU, 메모리 부하율 수집이 가능하고,</li>
-                        <li>그 외에 네트워크와 io 및 프로세스 로드율을 분석 할 수 있습니다.</li>
-                        <li>aRMS는 MetricBeat의 데이터 수집 상태만을 표시하기때문에</li>
-                        <li>하기는 MetricBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                    </li>
+                    <li>X축
                         <ul>
-                            <li>CPU stats - cpu</li>
-                            <li>System Load stats - load</li>
-                            <li>Per CPU core stats - core</li>
-                            <li>IO stats - diskio</li>
-                            <li>Per filesystem stats - filesystem</li>
-                            <li>File system summary stats - fsstat</li>
-                            <li>Memory stats - memory</li>
-                            <li>Network stats - network</li>
-                            <li>Per process stats - process</li>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
                         </ul>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">FileBeat</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">Heap Used</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain019.png" width="100%">
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain014.png" width="100%">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>Filebeat는 로그 데이터를 전달하고 중앙화하기 위한 경량의 Producer입니다.</li>
-                        <li>Host의 var 폴더 밑 Log를 지정하여 데이터를 수집하거나</li>
-                        <li>특정 Daemon의 Service Log 데이터를 수집할 수도 있겠습니다.</li>
-                        <li>하기는 FileBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
                         <ul>
-                            <li>Paths - [ Log 파일의 위치 : 패턴 ]</li>
+                            <li>Used Heap Size = S0U + S1U + EU + OU 이다.</li>
+                            <ul>
+                                <li>S0U :: Survivor space 0 utilization (KB)</li>
+                                <li>S1U :: Survivor space 1 utilization (KB)</li>
+                                <li>EU :: Eden space utilization (KB)</li>
+                                <li>OU :: Old space utilization (KB)</li>
+                            </ul>
+                            <li>즉 Used Heap의 의미는 현재 Java 객체가 차지하는 메모리 양입니다</li>
+                            <li>Working Set은 Heap에 살아있는 객체들의 총량을 나타낸다.</li>
+                            <li>JVM의 관점에서 Used Memory는 Working Set과 Garabage이고 Free Memory는 (현재 Heap 크기 - Used Memory) 이다.</li>
+                            <li>만약, -Xms < -Xmx 이고 Used Memory와 현재 힙 크키가 같으면, JVM은 full gc를 한 후에 힙을 키운다.</li>
+                            <li>그러나 -Xms와 -Xmx가 같다면 힙은 더이상 커지지 않는다.</li>
                         </ul>
-                        <li>FileBeat는 특별한 설정을 할게 없으나, 파일의 위치를 지정한만큼</li>
-                        <li>파일 내용이 모두 수집되기 때문에 주의를 기울일 필요가 있겠습니다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">HeartBeat</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain020.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>Heartbeat는 네트워크 내부 또는 외부에서 사용할 수 있습니다.</li>
-                        <li>원하는 HTTP, TCP 또는 ICMP 엔드포인트에 대한 네트워크 액세스만 있으면 되며,</li>
-                        <li>모니터링할 URL 목록을 Heartbeat에 의해 데이터가 수집됩니다.</li>
-                        <li>Heartbeat는 정기적으로 확인 작업을 수행하여</li>
-                        <li>엔드포인트가 가동 중인지 또는 중단되었는지 확인 할 수 있습니다.</li>
-                        <li>하기는 HeartBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                    </li>
+                    <li>X축
                         <ul>
-                            <li>urls - [ 모니터링 할 엔드포인트 url ]</li>
-                            <li>schedule - 일정 시간 반복 주기 설정</li>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
                         </ul>
-                        <li>파일 내용이 모두 수집되기 때문에 주의를 기울일 필요가 있겠습니다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">PacketBeat</h3>
-        </div>
-        <!-- /.box-header -->
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">Service Monitor</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain021.png" width="100%">
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain015.png" width="100%">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
 
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>PacketBeat는 HTTP 같은 네트워크 프로토콜로부터</li>
-                        <li>애플리케이션 지연 시간 및 오류, 응답 시간, SLA 성능, 사용자 액세스 패턴 및 추이를 수집합니다.</li>
-                        <li>이러한 데이터에 접근하여 네트워크 트래픽의 흐름이 어떤지 파악할 수 있습니다.</li>
-                        <li>하기는 PacketBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
                         <ul>
-                            <li>protocols - [ 모니터링 타입 리스트 ]</li>
-                            <li>ports - [ 모니터링 포트 리스트 ]</li>
+                            <li>각개의 Service 개수를 표시합니다.</li>
+                            <li>Service는 수집된 데이터의 Hash값에 의존하지 않습니다.</li>
+                            <li>Service는 수집된 데이터의 Service Name의 고유값에 따라 변동됩니다.</li>
+                            <li>따라서, Service Monitor Count는 클러스터 기반의 서비스 인스턴스 개수를 확인하는 용도이며,</li>
+                            <li>HA 구성의 서비스를 모니터링 하거나, 단일 Standalone 서비스라면 Heartbeat 용도의 모니터링 데이터이다.</li>
                         </ul>
-                        <li>패킷 수집 방식을 기본 pcap에서 af_packet 으로 변경이 가능합니다.</li>
-                        <li>이 변경은 리눅스 환경에서만 가능하고, CPU Usage를 좀 줄일 수 있다고 하지만</li>
-                        <li>트래픽이 많은 서비스의 경우는 크게 효과를 보지는 못하는것 같습니다.</li>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-4">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">Elastic APM</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <img src="../dist/img/ARMS/explain022.png" width="100%">
-        </div>
-    </div>
-</div>
-
-<div class="font11 col-md-8">
-    <div class="boxwhite box-primary">
-        <div class="box-header with-border">
-            <h3 class="arms-title">챠트 설명</h3>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-            <ul class="list-unstyled font13 lineh165">
-                <li>Y축
-                    <ul>
-                        <li>(Elastic APM) 애플리케이션 성능 모니터링은 메트릭과 로그 사이의 간격을 이어줍니다.</li>
-                        <li>로그와 메트릭이 인프라와 구성 요소를 처리하면서 보다 교차적인 경향이 있는 반면,</li>
-                        <li>APM은 애플리케이션에 중점을 둠으로써 애플리케이션 레이어를 모니터링할 수 있게 해줍니다.</li>
-                        <li>모니터링에 APM을 추가하면, ( aRMS는 2가지의 APM을 사용 할 수 있습니다 )</li>
+                    </li>
+                    <li>X축
                         <ul>
-                            <li>서비스가 어떤 작업에 시간을 소모하는지, 왜 작동이 중단되는지를 이해할 수 있습니다.</li>
-                            <li>서비스들이 어떻게 서로 상호작용하는지를 알게 되고, 병목 현상을 시각화할 수 있습니다.</li>
-                            <li>성능 병목 현상과 오류를 사전에 발견하고 수정할 수 있습니다.</li>
-                            <li>개발팀의 개발 품질을 측정하며, 각종 테스트를 수행하며 장애 상황을 미리 예측 할 수 있겠습니다.</li>
-                            <li>또한 브라우저에서 최종 사용자 경험을 추적할 수 있습니다.</li>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
                         </ul>
-                    </ul>
-                </li>
-                <li>X축
-                    <ul>
-                        <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
-                    </ul>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">TopBeat</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain016.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>topbeat는 이름으로 알 수 있듯이, </li>
+                            <li>현재 서버의 동작중인 프로세스당 cpu, memory, disk 와 같은 리소스의 점유율 데이터 매트릭스 입니다.</li>
+                            <li>aRMS는 데이터 수집 상태를 표시하기때문에</li>
+                            <li>하기는 HeartBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기합니다.</li>
+                            <ul>
+                                <li>system: 전체적인 사용 상태를 수집합니다(system load, cpu useage, memory useage, swap useage)</li>
+                                <li>process: 프로세스별 분석데이터를 수집합니다. (process name, parent pid, state, pid, cpu useage, memory useage)</li>
+                                <li>filesystem: 파일시스템 분석데이터를 수집합니다.(마운트된 디스크의 총량, 사용량, 각 디스크의 이름, 마운트위치 등)</li>
+                                <li>cpu_per_core: core별 cpu 사용량을 수집합니다. 기본값은 false(사용안함) 입니다.</li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">MetricBeat</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain018.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>MetricBeat는 TopBeat와 달리 status를 확장한 서버의 CPU, 메모리 부하율 수집이 가능하고,</li>
+                            <li>그 외에 네트워크와 io 및 프로세스 로드율을 분석 할 수 있습니다.</li>
+                            <li>aRMS는 MetricBeat의 데이터 수집 상태만을 표시하기때문에</li>
+                            <li>하기는 MetricBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                            <ul>
+                                <li>CPU stats - cpu</li>
+                                <li>System Load stats - load</li>
+                                <li>Per CPU core stats - core</li>
+                                <li>IO stats - diskio</li>
+                                <li>Per filesystem stats - filesystem</li>
+                                <li>File system summary stats - fsstat</li>
+                                <li>Memory stats - memory</li>
+                                <li>Network stats - network</li>
+                                <li>Per process stats - process</li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">FileBeat</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain019.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>Filebeat는 로그 데이터를 전달하고 중앙화하기 위한 경량의 Producer입니다.</li>
+                            <li>Host의 var 폴더 밑 Log를 지정하여 데이터를 수집하거나</li>
+                            <li>특정 Daemon의 Service Log 데이터를 수집할 수도 있겠습니다.</li>
+                            <li>하기는 FileBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                            <ul>
+                                <li>Paths - [ Log 파일의 위치 : 패턴 ]</li>
+                            </ul>
+                            <li>FileBeat는 특별한 설정을 할게 없으나, 파일의 위치를 지정한만큼</li>
+                            <li>파일 내용이 모두 수집되기 때문에 주의를 기울일 필요가 있겠습니다.</li>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">HeartBeat</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain020.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>Heartbeat는 네트워크 내부 또는 외부에서 사용할 수 있습니다.</li>
+                            <li>원하는 HTTP, TCP 또는 ICMP 엔드포인트에 대한 네트워크 액세스만 있으면 되며,</li>
+                            <li>모니터링할 URL 목록을 Heartbeat에 의해 데이터가 수집됩니다.</li>
+                            <li>Heartbeat는 정기적으로 확인 작업을 수행하여</li>
+                            <li>엔드포인트가 가동 중인지 또는 중단되었는지 확인 할 수 있습니다.</li>
+                            <li>하기는 HeartBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                            <ul>
+                                <li>urls - [ 모니터링 할 엔드포인트 url ]</li>
+                                <li>schedule - 일정 시간 반복 주기 설정</li>
+                            </ul>
+                            <li>파일 내용이 모두 수집되기 때문에 주의를 기울일 필요가 있겠습니다.</li>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">PacketBeat</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain021.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>PacketBeat는 HTTP 같은 네트워크 프로토콜로부터</li>
+                            <li>애플리케이션 지연 시간 및 오류, 응답 시간, SLA 성능, 사용자 액세스 패턴 및 추이를 수집합니다.</li>
+                            <li>이러한 데이터에 접근하여 네트워크 트래픽의 흐름이 어떤지 파악할 수 있습니다.</li>
+                            <li>하기는 PacketBeat를 통해 확인할 수 있는 데이터를 yml에서 추출하여 표기하였습니다.</li>
+                            <ul>
+                                <li>protocols - [ 모니터링 타입 리스트 ]</li>
+                                <li>ports - [ 모니터링 포트 리스트 ]</li>
+                            </ul>
+                            <li>패킷 수집 방식을 기본 pcap에서 af_packet 으로 변경이 가능합니다.</li>
+                            <li>이 변경은 리눅스 환경에서만 가능하고, CPU Usage를 좀 줄일 수 있다고 하지만</li>
+                            <li>트래픽이 많은 서비스의 경우는 크게 효과를 보지는 못하는것 같습니다.</li>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="font11 col-md-4">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">Elastic APM</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <img src="../dist/img/ARMS/explain022.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="font11 col-md-8">
+        <div class="boxwhite box-primary">
+            <div class="box-header with-border">
+                <h3 class="arms-title">챠트 설명</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <ul class="list-unstyled font13 lineh165">
+                    <li>Y축
+                        <ul>
+                            <li>(Elastic APM) 애플리케이션 성능 모니터링은 메트릭과 로그 사이의 간격을 이어줍니다.</li>
+                            <li>로그와 메트릭이 인프라와 구성 요소를 처리하면서 보다 교차적인 경향이 있는 반면,</li>
+                            <li>APM은 애플리케이션에 중점을 둠으로써 애플리케이션 레이어를 모니터링할 수 있게 해줍니다.</li>
+                            <li>모니터링에 APM을 추가하면, ( aRMS는 2가지의 APM을 사용 할 수 있습니다 )</li>
+                            <ul>
+                                <li>서비스가 어떤 작업에 시간을 소모하는지, 왜 작동이 중단되는지를 이해할 수 있습니다.</li>
+                                <li>서비스들이 어떻게 서로 상호작용하는지를 알게 되고, 병목 현상을 시각화할 수 있습니다.</li>
+                                <li>성능 병목 현상과 오류를 사전에 발견하고 수정할 수 있습니다.</li>
+                                <li>개발팀의 개발 품질을 측정하며, 각종 테스트를 수행하며 장애 상황을 미리 예측 할 수 있겠습니다.</li>
+                                <li>또한 브라우저에서 최종 사용자 경험을 추적할 수 있습니다.</li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>X축
+                        <ul>
+                            <li><strong>이벤트 발생 시간</strong>을 의미합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

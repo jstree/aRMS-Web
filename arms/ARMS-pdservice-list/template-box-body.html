@@ -1,12 +1,12 @@
 <div class="row">
 
     <div class="col-md-12">
-        <div class="box box box-primary">
+        <div class="box box box-primary collapsed-box" style="padding-bottom: 3px">
             <div class="box-header with-border">
-                <h3 class="box-title"><b>aRMS 전체 프로세스 차트</b></h3>
+                <h3 class="box-title"><b>aRMS Flow Chart</b></h3>
 
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
                     </button>
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
                     </button>
@@ -63,93 +63,97 @@
 <!-- /.row -->
 
 <div class="row">
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-aqua">
-            <span class="info-box-icon"><i class="fa fa-list-ol"></i></span>
+    <div class="col-md-12">
+        <div class="box box box-primary" style="padding-top: 10px; border-top: 2px dotted #3c8dbc;">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-aqua">
+                    <span class="info-box-icon"><i class="fa fa-list-ol"></i></span>
 
-            <div class="info-box-content">
-                <span class="custom-info-box-text-header">Req Monthly Count</span>
-                <span class="info-box-number">41,410</span>
+                    <div class="info-box-content">
+                        <span class="custom-info-box-text-header">Product(Service) Count</span>
+                        <span class="info-box-number">313 EA</span>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <span class="custom-progress-description">
+                                제품(서비스) 조회 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <span class="custom-progress-description">
-                        요구사항 조회 <i class="fa fa-arrow-circle-right"></i>
-                      </span>
+                <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-gray">
-            <span class="info-box-icon"><i class="fa fa-plus-square-o"></i></span>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-gray">
+                    <span class="info-box-icon"><i class="fa fa-plus-square-o"></i></span>
 
-            <div class="info-box-content">
-                <span class="custom-info-box-text-header">Monthly Regist Req.</span>
-                <span class="info-box-number">3,130</span>
+                    <div class="info-box-content">
+                        <span class="custom-info-box-text-header">Product(Service) Need Mapping</span>
+                        <span class="info-box-number">131 EA</span>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 31%"></div>
+                        </div>
+                        <span class="custom-progress-description">
+                                제품(서비스) - Jira Project 연동 필요 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <span class="custom-progress-description">
-                        요구사항 등록/변경 <i class="fa fa-arrow-circle-right"></i>
-                      </span>
+                <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-gray">
-            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-gray">
+                    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
 
-            <div class="info-box-content">
-                <span class="custom-info-box-text-header">Monthly Accept Req</span>
-                <span class="info-box-number">13,931</span>
+                    <div class="info-box-content">
+                        <span class="custom-info-box-text-header">Product(Service) Mapped Count</span>
+                        <span class="info-box-number">1,331 EA</span>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                        <span class="custom-progress-description">
+                                제품(서비스) - Jira Project 연동 완료 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <span class="custom-progress-description">
-                        요구사항 리뷰/승인 <i class="fa fa-arrow-circle-right"></i>
-                      </span>
+                <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-gray">
-            <span class="info-box-icon"><i class="fa fa-bar-chart"></i></span>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-gray">
+                    <span class="info-box-icon"><i class="fa fa-bar-chart"></i></span>
 
-            <div class="info-box-content">
-                <span class="custom-info-box-text-header">Monthly Sync Req.</span>
-                <span class="info-box-number">130,463</span>
+                    <div class="info-box-content">
+                        <span class="custom-info-box-text-header">Product(Service) Crawl Issue</span>
+                        <span class="info-box-number">10,463 EA</span>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <span class="custom-progress-description">
+                                제품(서비스) - Jira Project 연동 이슈 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <span class="custom-progress-description">
-                        요구사항 연동/분석 <i class="fa fa-arrow-circle-right"></i>
-                      </span>
+                <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
+            <!-- /.col -->
         </div>
-        <!-- /.info-box -->
     </div>
-    <!-- /.col -->
 </div>
 
 <div class="row font13">
     <div class="col-md-3">
-        <a href="ARMS-req-regist.html" class="btn btn-primary btn-block margin-bottom">요구사항 등록</a>
+        <a href="ARMS-req-regist.html" class="btn btn-primary btn-block margin-bottom">제품(서비스) 등록</a>
 
-        <div class="box box-solid">
+        <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title"><span class="font13">조회 구분</span></h3>
 
@@ -163,10 +167,7 @@
                     <li class="active"><a href="#"><i class="fa fa-inbox"></i> Total Inbox
                         <span class="label label-primary pull-right">12</span></a></li>
                     <li><a href="#"><i class="fa fa-commenting-o"></i> Ownership Filter</a></li>
-                    <li><a href="#"><i class="fa fa-file-text-o"></i> My Request</a></li>
-                    <li><a href="#"><i class="fa fa-filter"></i> Approved Me <span
-                            class="label label-warning pull-right">65</span></a>
-                    </li>
+                    <li><a href="#"><i class="fa fa-file-text-o"></i> My Product(Service)</a></li>
                     <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
                 </ul>
             </div>
@@ -217,7 +218,7 @@
 
                 <div class="box-tools pull-right">
                     <div class="has-feedback">
-                        <input type="text" class="form-control input-sm" placeholder="Search Requirement">
+                        <input type="text" class="form-control input-sm" placeholder="Search Product(Service)">
                         <span class="glyphicon glyphicon-search form-control-feedback"></span>
                     </div>
                 </div>
@@ -254,8 +255,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jstree-358</a></td>
-                            <td class="mailbox-subject"><b>이동민</b> - Core-Lib 사용시 메세지 소스 적용 방법 변경 요청...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Java Service Tree Framework</a></td>
+                            <td class="mailbox-subject"><b>이동민</b> - JSTF 는 MVC의 기본 패턴 코드를 제공하여...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">5 mins ago</td>
@@ -263,8 +264,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-984</a></td>
-                            <td class="mailbox-subject"><b>조경원</b> - 처음 사용자를 위한 마법사 기능이 필요합니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">atlassian RMS(Requirement Management System)</a></td>
+                            <td class="mailbox-subject"><b>조경원</b> - JSTF를 활용하여 Atlassian Tool Chain의 부족분인 RMS...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">28 mins ago</td>
@@ -272,8 +273,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-718</a></td>
-                            <td class="mailbox-subject"><b>전옥현</b> - 조회 리스트에 상태 표시가 필요합니다(승인 대기중 같은)...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Docker Swarm Monitorng Allinone</a></td>
+                            <td class="mailbox-subject"><b>전옥현</b> - K8S 와 동일한 스웜기반의 클러스터 동작을 지원...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">11 hours ago</td>
@@ -281,8 +282,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-609</a></td>
-                            <td class="mailbox-subject"><b>김경화</b> - JQL 같은 Search Plugin을 활용할 수 있으면 좋겠습니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">aRMS 기획 서비스 (Document)</a></td>
+                            <td class="mailbox-subject"><b>김경화</b> - aRMS를 기획하기 위한 문서 산출을 위한 임시 제품등록 ...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">15 hours ago</td>
@@ -290,8 +291,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-540</a></td>
-                            <td class="mailbox-subject"><b>함봄</b> - 특정 요구사항의 업데이트시 메일로 Noti 하는 기능이 필요합니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">NewLife allin MyDev</a></td>
+                            <td class="mailbox-subject"><b>함봄</b> - 내 삶의 모든 것을 들여서 만드는 내 지식의 총화...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">Yesterday</td>
@@ -299,8 +300,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-490</a></td>
-                            <td class="mailbox-subject"><b>이진숙</b> - 요구사항 이슈 상세보기 할때, 연관 Jira Issue 정보가 필요합니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Spinnaker Wrapper DevOps Pipeline</a></td>
+                            <td class="mailbox-subject"><b>이진숙</b> - CI 와 CD 중간에 파이프라인을 구성하는 툴...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">2 days ago</td>
@@ -308,8 +309,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-313</a></td>
-                            <td class="mailbox-subject"><b>이혜진</b> - 요구사항 검색시 자동완성 리스트를 확인 할 수 있으면 좋겠습니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">OIDC Oauth2.0 Wrapper KeyCloak</a></td>
+                            <td class="mailbox-subject"><b>이혜진</b> - 각종 개발툴을 하나의 인증으로 바인딩하여 처리...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">2 days ago</td>
@@ -317,8 +318,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-209</a></td>
-                            <td class="mailbox-subject"><b>전하선</b> - 요구사항 리스트에 체크박스가 표시되지 않습니다...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Jenkins Code Build Continue Integration</a></td>
+                            <td class="mailbox-subject"><b>전하선</b> - 빌드 와 배포 모두를 할 수 있는 대표적인 시스템...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">2 days ago</td>
@@ -326,8 +327,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-188</a></td>
-                            <td class="mailbox-subject"><b>김효진</b> - aRMS가 jstree로 구성되 있다면 mysql 지원일정은 언제...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Bamboo Build Pipe System</a></td>
+                            <td class="mailbox-subject"><b>김효진</b> - atlassian 전용 빌드 툴이고, 장점은 데이터 연동...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">2 days ago</td>
@@ -335,8 +336,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-aRMS-098</a></td>
-                            <td class="mailbox-subject"><b>김병우</b> - icheck box plugin 이 동작하지 않아서 체크박스 기능 오동작...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Jira Issue Track System</a></td>
+                            <td class="mailbox-subject"><b>김병우</b> - atlassian 대표 제품인 이슈 트랙킹 시스템...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">2 days ago</td>
@@ -344,8 +345,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jsTree-998</a></td>
-                            <td class="mailbox-subject"><b>류강하</b> - data grid 활용에 대한 테스트도 진행해야 할 것...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Confluence Online Document Management System</a></td>
+                            <td class="mailbox-subject"><b>류강하</b> - atlassian 의 두번째 대표 제품인 온라인 위키 문서...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">4 days ago</td>
@@ -353,8 +354,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jsTree-898</a></td>
-                            <td class="mailbox-subject"><b>오권우</b> - 리스트 카운트를 증가시켜서 보다 많은 요구사항을 리스트업...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Nexus Artifact Repository Management System</a></td>
+                            <td class="mailbox-subject"><b>오권우</b> - 빌드 결과 혹은 바이너리 아티팩트를 구조적으로 저장...
                             </td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">12 days ago</td>
@@ -362,8 +363,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jsTree-791</a></td>
-                            <td class="mailbox-subject"><b>유정우</b> - 세부 요구사항 표시할때 jira 연동한 데이터 표시도...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">ElasticSearch Data Search System Base index</a></td>
+                            <td class="mailbox-subject"><b>유정우</b> - 인덱스 기반의 검색엔진으로 오픈소스가 장점인...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">12 days ago</td>
@@ -371,8 +372,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jsTree-638</a></td>
-                            <td class="mailbox-subject"><b>전경훈</b> - 세부 요구사항 표시할 때 confluence 연동 데이터 링크...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">Grafana Timeline Data Storage</a></td>
+                            <td class="mailbox-subject"><b>전경훈</b> - 시계열 모니터링 시스템 도구...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">14 days ago</td>
@@ -380,8 +381,8 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                            <td class="mailbox-name"><a href="ARMS-req-read.html">REQ-jsTree-512</a></td>
-                            <td class="mailbox-subject"><b>최민석</b> - 세부 요구사항 표시할 때 version 및 build 상태도 표시...
+                            <td class="mailbox-name"><a href="ARMS-pdservice-list-read.html">www313cokr DevOps Portal Total Link</a></td>
+                            <td class="mailbox-subject"><b>최민석</b> - 개발하면서 필요한 모든 시스템을 구성한 툴 성격...
                             </td>
                             <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                             <td class="mailbox-date">15 days ago</td>
