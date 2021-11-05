@@ -22,7 +22,6 @@
                         </div>
                         <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice02.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
                             <div class="font12" style="padding-top: 70px; font-weight: 900">제품➞<br>➞JIRA<br>연결</div>
-                            <img class="img-responsive" style="display: block; margin: 0px auto; margin-top: -155px" src="../dist/img/round.gif">
                         </div>
                         <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice03.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
                             <div class="font12" style="padding-top: 70px; font-weight: 900">제품<br>선택<br></div>
@@ -48,6 +47,7 @@
                         </div>
                         <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice09.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
                             <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA➞<br>➞제품<br>데이터<br>분석</div>
+                            <img class="img-responsive" style="display: block; margin: 0px auto; margin-top: -155px" src="../dist/img/round.gif">
                         </div>
                         <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice10.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
                             <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA➞<br>➞제품<br>분석<br>리포트</div>
@@ -77,8 +77,8 @@
                     <div class="progress-bar" style="width: 100%"></div>
                 </div>
                 <span class="custom-progress-description">
-                            제품(서비스) 조회 <i class="fa fa-arrow-circle-right"></i>
-                          </span>
+                                제품(서비스) 데이터 수집 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -86,19 +86,19 @@
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-gray">
+        <div class="info-box bg-green">
             <span class="info-box-icon"><i class="fa fa-plus-square-o"></i></span>
 
             <div class="info-box-content">
                 <span class="custom-info-box-text-header">Product(Service) Need Mapping</span>
-                <span class="info-box-number">131 EA</span>
+                <span class="info-box-number">313 EA</span>
 
                 <div class="progress">
                     <div class="progress-bar" style="width: 31%"></div>
                 </div>
                 <span class="custom-progress-description">
-                            제품(서비스) 등록/변경 <i class="fa fa-arrow-circle-right"></i>
-                          </span>
+                                제품(서비스) 데이터 분석 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -117,8 +117,8 @@
                     <div class="progress-bar" style="width: 70%"></div>
                 </div>
                 <span class="custom-progress-description">
-                            제품(서비스) - 계층 업데이트 <i class="fa fa-arrow-circle-right"></i>
-                          </span>
+                                제품(서비스) 개별 리포트 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -126,7 +126,7 @@
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-red">
+        <div class="info-box bg-gray">
             <span class="info-box-icon"><i class="fa fa-bar-chart"></i></span>
 
             <div class="info-box-content">
@@ -137,8 +137,8 @@
                     <div class="progress-bar" style="width: 100%"></div>
                 </div>
                 <span class="custom-progress-description">
-                            제품(서비스) - Jira Project 맵핑 <i class="fa fa-arrow-circle-right"></i>
-                          </span>
+                                제품(서비스) 전체 리포트 <i class="fa fa-arrow-circle-right"></i>
+                              </span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -668,18 +668,15 @@
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <i class="fa fa-copy"></i>
-                    <h3 class="box-title"><span style="font-size: 14px"><b>제품(서비스) - JIRA Project MAP</b></span></h3>
+                    <h3 class="box-title"><span style="font-size: 14px"><b>제품(서비스) - JIRA Project 데이터 분석</b></span></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <br>
-                    <div class="form-group">
-                        <input type="text" class="form-control font13" placeholder="적용할 제품(서비스): aRMS Monitoring System" disabled="">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control font13" placeholder="적용할 제품(서비스) 버전 정보: 1.0.1-SNAPSHOT" disabled="">
-                    </div>
-                    <div class="chart" id="OrganiseChart6"></div>
+
+
+
+
+
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
@@ -691,186 +688,3 @@
         <!-- /.col -->
     </div>
     <!-- /.row -->
-
-<script>
-    //<![CDATA[
-    // source:
-    // http://www.atpworldtour.com/Share/Event-Draws.aspx?EventId=410&Year=2013
-
-    var tree_structure = {
-        chart: {
-            container: "#OrganiseChart6",
-            levelSeparation:    20,
-            siblingSeparation:  15,
-            subTeeSeparation:   15,
-            rootOrientation: "EAST",
-
-            node: {
-                HTMLclass: "tennis-draw",
-                drawLineThrough: true
-            },
-            connectors: {
-                type: "straight",
-                style: {
-                    "stroke-width": 2,
-                    "stroke": "#ccc"
-                }
-            }
-        },
-
-        nodeStructure: {
-            text: {
-                name: {val: "aRMS Product", href: "http://www.313.co.kr/jira"}
-            },
-            HTMLclass: "winner",
-            text: {
-                name: "aRMS Product",
-                desc: "v. 1.0.0"
-            },
-            children: [
-                {
-                    text: {
-                        name: "사업,영업,기획",
-                        desc: "CE"
-                    },
-                    children: [
-                        {
-                            text: {
-                                name: "aRMS 기획",
-                                title: "CE"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "aRMS PMO",
-                                title: "CE"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "aRMS 영업",
-                                title: "CE"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        }
-                    ]
-                },
-                {
-                    text: {
-                        name: "개발",
-                        desc: "DEV"
-                    },
-                    children: [
-                        {
-                            text: {
-                                name: "Java Service Tree Framework Core Library 프로젝트",
-                                title: "DEV"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw",
-
-                        },
-                        {
-                            text: {
-                                name: "aRMS Frontend Publish 프로젝트",
-                                title: "DEV"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "aRMS Frontend Design 프로젝트",
-                                title: "Design"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "aRMS Backend Server Project",
-                                title: "DEV"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "aRMS Backend Proxy & Auth Project",
-                                title: "DEV"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        }
-                    ]
-                },
-                {
-                    text: {
-                        name: "인프라",
-                        desc: "OPR"
-                    },
-                    children: [
-                        {
-                            text: {
-                                name: "Docker Swarm Server 운영",
-                                title: "OPR"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "Database RDB, Search Engineer",
-                                title: "OPR"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "Network Engineer",
-                                title: "OPR"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        },
-                        {
-                            text: {
-                                name: "Allinone Monitoring 관제",
-                                title: "OPR"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        }
-                    ]
-                },
-                {
-                    text: {
-                        name: "품질",
-                        desc: "QA"
-                    },
-                    children: [
-                        {
-                            text: {
-                                name: "aRMS 기능 테스트",
-                                title: "QA"
-                            },
-                            image: "../dist/img/ARMS-pdservice-map-jira/16jira.png",
-                            HTMLclass: "first-draw"
-                        }
-                    ]
-                }
-            ]
-        }
-    };
-    //]]>
-</script>
-
-<script>
-    new Treant( tree_structure );
-</script>
