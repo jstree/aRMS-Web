@@ -693,43 +693,48 @@
     //<![CDATA[
     $(document).ready( function () {
         var data = [
-            ['subgroupN', 'Group1', 'sub-subgroupN', 'ElementN', '2Element N'],
-            ['subgroup1', 'Group2', 'sub-subgroup1', 'Element1', '2Element 1'],
-            ['subgroup2', 'Group2', 'sub-subgroup1', 'Element1', '2Element 1'],
-            ['subgroup2', 'Group2', 'sub-subgroup1', 'Element2', '2Element 2'],
-            ['subgroup2', 'Group2', 'sub-subgroup2', 'Element3', '2Element 2'],
-            ['subgroup2', 'Group2', 'sub-subgroup2', 'Element4', '2Element 4'],
-            ['subgroup2', 'Group2', 'sub-subgroup2', 'Element2', '2Element 2'],
-            ['subgroup3', 'Group1', 'sub-subgroup1', 'Element1', '2Element 1'],
-            ['subgroup3', 'Group1', 'sub-subgroup1', 'Element1', '2Element 1'],
-            ['subgroup2', 'Group2', 'sub-subgroup2', 'Element1', '2Element 1'],
-            ['subgroup4', 'Group2', 'sub-subgroup2', 'Element1', '2Element 1'],
-            ['subgroup4', 'Group2', 'sub-subgroup3', 'Element10', '2Element 17'],
-            ['subgroup4', 'Group2', 'sub-subgroup3', 'Element231', '2Element 211'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Dev-Backend', 'ISSUE-DEV-01', 'Resolved'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Dev-Backend', 'ISSUE-DEV-16', 'Closed'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Design-Front', 'ISSUE-DES-193', 'Open'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Oper-DB', 'ISSUE-DB-163', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Oper-SYS', 'ISSUE-SYS-213', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Oper-SYS', 'ISSUE-SYS-863', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-13', 'JIRA-Oper-SYS', 'ISSUE-DO-10', 'Progress'],
+
+            ['aRMS Product', 'REQ-Auth-19', 'JIRA-Dev-Backend', 'ISSUE-DEV-101', 'Resolved'],
+            ['aRMS Product', 'REQ-Auth-19', 'JIRA-Dev-Backend', 'ISSUE-DEV-136', 'Closed'],
+            ['aRMS Product', 'REQ-Auth-19', 'JIRA-Design-Front', 'ISSUE-DES-143', 'Open'],
+            ['aRMS Product', 'REQ-Auth-19', 'JIRA-Oper-DB', 'ISSUE-DB-763', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-19', 'JIRA-Oper-SYS', 'ISSUE-SYS-913', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-21', 'JIRA-Oper-SYS', 'ISSUE-SYS-263', 'Progress'],
+            ['aRMS Product', 'REQ-Auth-21', 'JIRA-Oper-SYS', 'ISSUE-DO-40', 'Progress'],
 
         ];
         var table = $('#example').DataTable({
             columns: [
                 {
-                    title: 'First group',
+                    name: 'first',
+                    title: '제품(서비스)',
                 },
                 {
                     name: 'second',
-                    title: 'Second group [order first]',
+                    title: '요구사항',
                 },
                 {
-                    title: 'Third group',
+                    title: 'JIRA Project',
                 },
                 {
-                    title: 'Forth ungrouped',
+                    title: 'Issue',
                 },
                 {
-                    title: 'Fifth ungrouped',
+                    title: 'Status - Test',
                 },
             ],
             data: data,
-            rowsGroup: [// Always the array (!) of the column-selectors in specified order to which rows groupping is applied
+            rowsGroup: [
+                // Always the array (!) of the column-selectors in specified order to which rows groupping is applied
                 // (column-selector could be any of specified in https://datatables.net/reference/type/column-selector)
+                'first:name',
                 'second:name',
                 0,
                 2
