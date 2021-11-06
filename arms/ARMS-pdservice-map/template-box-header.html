@@ -1,3 +1,43 @@
+<style>
+    .aui-header {
+        background: #0747a6;
+        color: #deebff;
+        border-bottom-color: #2e3d54;
+    }
+
+    .aui-header .logo-lg img {
+        border: 0;
+        float: left;
+        max-height: 35px;
+        padding: 12px 5px 0 0;
+    }
+    /* optional Container STYLES */
+    .chart { height: 600px; width: 100%; margin: 5px; margin: 15px auto; border: 3px solid #DDD; border-radius: 3px; }
+
+    .tennis-draw {
+        font-size: 13px;
+        width: 100px;
+    }
+
+    .tennis-draw.winner { height: 38px; }
+    .tennis-draw.winner:hover { background: url('trophy.png') right 0 no-repeat; }
+    .tennis-draw.winner .node-name { padding-left: 10px; margin-top: 1px; display: block; }
+
+    .tennis-draw .node-name { white-space: pre; color: #00AFF0; }
+    .tennis-draw .node-desc { padding: 2px; color: #999; }
+
+    .tennis-draw.first-draw .node-title,
+    .tennis-draw.first-draw .node-name,
+    .tennis-draw.first-draw img { position: absolute; top: -8px; }
+    .tennis-draw.first-draw:hover img { width: 20px; top: -12px; }
+
+    .tennis-draw.first-draw { width: 250px; height: 20px; }
+    .tennis-draw.first-draw img { margin: 3px 4px 0 0; left: 25px; }
+    .tennis-draw.first-draw .node-title { margin-top: 0px; left: -15px }
+    .tennis-draw.first-draw .node-name { width: 113px; padding-left: 50px; }
+    .tennis-draw.first-draw.bye .node-name { color: #999; }
+
+</style>
 <div class="user-block">
     <img class="img-circle" src="../dist/img/iconpack/Run.png" alt="User Image">
     <span class="username" style="margin-left: -2px"><a href="#">aRMS 제품(서비스) - JIRA Project MAP</a></span>

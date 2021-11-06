@@ -1,0 +1,172 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="box box box-primary" style="padding-bottom: 3px">
+            <div class="box-header with-border">
+                <i class="fa fa-heartbeat"></i>
+                <h3 class="box-title"><b>aRMS Flow Chart</b></h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice01.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">aRMS<br>제품<br>(서비스)<br>등록</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice02.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">제품➞<br>➞JIRA<br>연결</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice03.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">제품<br>선택<br></div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice00.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice04.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">제품<br>요구사항<br>등록<br>변경</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice05.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">제품<br>요구사항<br>리뷰<br>승인</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice06.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">제품➞<br>➞JIRA<br><span class="font12">요구사항 전파</span></div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice07.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA Project<br>Working!<br></div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice00.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice08.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA➞<br>➞제품<br>데이터<br>수집</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice09.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA➞<br>➞제품<br>데이터<br>분석</div>
+                        </div>
+                        <div class="col-md-1" style="background: url('../dist/img/arms-process/pdservice10.png'); background-size: 100px 140px; background-repeat: no-repeat; background-position: center; height: 140px; text-align: center;">
+                            <div class="font12" style="padding-top: 70px; font-weight: 900">JIRA➞<br>➞제품<br>분석<br>리포트</div>
+                            <img class="img-responsive" style="display: block; margin: 0px auto; margin-top: -155px" src="../dist/img/round.gif">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- ./box-body -->
+        </div>
+    </div>
+    <!-- col-md-12 -->
+</div>
+<!-- /.row -->
+
+<div class="row font13" style="padding-top: 10px; border-top: 2px dotted #3c8dbc;">
+    <!-- /.col -->
+    <div class="col-md-12" id="jiraMapCanvas">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <i class="fa fa-balance-scale"></i>
+                <h3 class="box-title"><span style="font-size: 14px"><b>제품(서비스)-JIRA Project Mapping</b></span></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <div id="ganttChart"></div>
+                <br/><br/>
+                <div id="eventMessage"></div>
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /. box -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->
+
+<script type="text/javascript">
+    var ganttData = [
+        {
+            id: 1, name: "Feature 1", series: [
+                { name: "Planned", start: new Date(2010,00,01), end: new Date(2010,00,03) },
+                { name: "Actual", start: new Date(2010,00,02), end: new Date(2010,00,05), color: "#f0f0f0" }
+            ]
+        },
+        {
+            id: 2, name: "Feature 2", series: [
+                { name: "Planned", start: new Date(2010,00,05), end: new Date(2010,00,20) },
+                { name: "Actual", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#f0f0f0" },
+                { name: "Projected", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#e0e0e0" }
+            ]
+        },
+        {
+            id: 3, name: "Feature 3", series: [
+                { name: "Planned", start: new Date(2010,00,11), end: new Date(2010,01,03) },
+                { name: "Actual", start: new Date(2010,00,15), end: new Date(2010,01,03), color: "#f0f0f0" }
+            ]
+        },
+        {
+            id: 4, name: "Feature 4", series: [
+                { name: "Planned", start: new Date(2010,01,01), end: new Date(2010,01,03) },
+                { name: "Actual", start: new Date(2010,01,01), end: new Date(2010,01,05), color: "#f0f0f0" }
+            ]
+        },
+        {
+            id: 5, name: "Feature 5", series: [
+                { name: "Planned", start: new Date(2010,02,01), end: new Date(2010,03,20) },
+                { name: "Actual", start: new Date(2010,02,01), end: new Date(2010,03,26), color: "#f0f0f0" }
+            ]
+        },
+        {
+            id: 6, name: "Feature 6", series: [
+                { name: "Planned", start: new Date(2010,00,05), end: new Date(2010,00,20) },
+                { name: "Actual", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#f0f0f0" },
+                { name: "Projected", start: new Date(2010,00,06), end: new Date(2010,00,20), color: "#e0e0e0" }
+            ]
+        },
+        {
+            id: 7, name: "Feature 7", series: [
+                { name: "Planned", start: new Date(2010,00,11), end: new Date(2010,01,03) }
+            ]
+        },
+        {
+            id: 8, name: "Feature 8", series: [
+                { name: "Planned", start: new Date(2010,01,01), end: new Date(2010,01,03) },
+                { name: "Actual", start: new Date(2010,01,01), end: new Date(2010,01,05), color: "#f0f0f0" }
+            ]
+        }
+    ];
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#ganttChart").ganttView({
+            data: ganttData,
+            slideWidth: 900,
+            behavior: {
+                onClick: function (data) {
+                    var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onResize: function (data) {
+                    var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onDrag: function (data) {
+                    var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                }
+            }
+        });
+
+        // $("#ganttChart").ganttView("setSlideWidth", 600);
+    });
+</script>
