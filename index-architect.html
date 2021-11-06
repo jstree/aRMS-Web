@@ -79,11 +79,6 @@
 
     <link rel="stylesheet" href="../dist/css/ArmsAUI.css">
 
-    <!--keycloak -->
-    <script type="text/javascript" src='../dist/js/keycloak.js' charset="utf-8"></script>
-    <script type="text/javascript" src='../dist/js/keycloak-login.js' charset="utf-8"></script>
-
-    <link rel="stylesheet" href="../dist/js/treant-js-1.0/Treant.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -120,55 +115,23 @@
     </script>
     <!-- NAVER ANALYTICS END -->
 </head>
-<body class="hold-transition sidebar-mini wysihtml5-supported skin-black-light">
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
 
-    <header class="main-header" data-include="ARMS-analysis-map-jira/template-header.html"></header>
+    <header class="main-header" data-include="include/architect/header.html" style="background-color: #1d1df1;">
 
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar" data-include="ARMS-analysis-map-jira/template-sidebar.html"></aside>
+    </header>
+    <!-- Full Width Column -->
+    <div class="content-wrapper" data-include="include/architect/contents.html" style="background-color: #ebeced;">
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Box Comment -->
-                    <div class="box box-widget">
-                        <div class="box-header with-border" data-include="ARMS-analysis-map-jira/template-box-header.html"></div>
-                        <!-- /.box-header -->
-                        <div class="box-body" data-include="ARMS-analysis-map-jira/template-box-body.html"></div>
-                        <!-- /.box-body -->
-                        <div class="box-footer box-comments" data-include="ARMS-analysis-map-jira/template-box-comments.html"></div>
-                        <!-- /.box-comments -->
-                        <div class="box-footer"data-include="ARMS-analysis-map-jira/template-box-footer.html"></div>
-                        <!-- /.box-footer -->
-                    </div>
-                    <!-- /.box -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </section>
-        <!-- /.content -->
-        <footer class="copyrightLayer font12 pull-right" data-include="ARMS-analysis-map-jira/template-footer.html"></footer>
     </div>
     <!-- /.content-wrapper -->
+    <footer class="main-footer" data-include="include/architect/footer.html">
 
+    </footer>
 </div>
 <!-- ./wrapper -->
-<!-- Control Sidebar -->
-<div class="asideWrapper">
-    <aside class="control-sidebar"></aside>
-</div>
-<!-- /.control-sidebar -->
-<!-- Control Sidebar -->
-<div class="leftAsideWrapper">
-    <aside class="leftcontrol-sidebar"></aside>
-</div>
-<!-- /.control-sidebar -->
 
 <!-- jQuery 3 -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -219,11 +182,6 @@
 <script type="text/javascript" src='../dist/js/DataTables-1.10.16/extensions/Responsive/js/dataTables.responsive.js' charset="utf-8"></script>
 <!-- Style Setting -->
 
-<script src="../dist/js/arbor/jquery.address-1.4.min.js"></script>
-<script src="../dist/js/arbor/arbor.js"></script>
-<script src="../dist/js/arbor/arbor-tween.js"></script>
-<script src="../dist/js/arbor/arbor-graphics.js"></script>
-
 <script>
     //<![CDATA[
     $(function () {
@@ -264,6 +222,5 @@
     }
     //]]>
 </script>
-
 </body>
 </html>
