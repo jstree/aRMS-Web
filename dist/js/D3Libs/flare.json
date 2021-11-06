@@ -1,0 +1,559 @@
+{
+  "name":"Michele Rizzi Knowledge",
+  "children":[
+
+    {
+      "name":"Software development",
+      "filter":"Java",
+      "children":[
+
+        {
+          "name":"Java",
+          "children":[
+            {
+              "name":"Web Service",
+              "children":[
+                {
+                  "name":"Web Service",
+                  "size":3812
+                },
+                {
+                  "name":"Rest service",
+                  "filter":"Rest",
+                  "size":6714
+                }
+              ]
+            },
+            {
+              "name":"Framework",
+              "filter":"Java",
+              "children":[
+                {
+                  "name":"Hibernate",
+                  "size":3812
+                },
+                {
+                  "name":"JSF",
+                  "size":6714
+                },
+                {
+                  "name":"Struts",
+                  "size":6714
+                },
+                {
+                  "name":"Spring",
+                  "size":6714
+                },
+                {
+                  "name":"RestEasy",
+                  "size":6714
+                },
+                {
+                  "name":"Quartz",
+                  "size":6714
+                },
+                {
+                  "name":"JBPM",
+                  "size":6714
+                },
+                {
+                  "name":"mule ESB",
+                  "filter":"mule",
+                  "size":6714
+                },
+                {
+                  "name":"Metastorm",
+                  "size":6714
+                },
+                {
+                  "name":"EJB",
+                  "size":6714
+                },
+                {
+                  "name":"JMS",
+                  "size":6714
+                },
+
+
+                {
+                  "name":"Velocity",
+                  "size":6714
+                },
+                {
+                  "name":"XSL",
+                  "size":6714
+                },
+                {
+                  "name":"Flink",
+                  "size":6714
+                },
+                {
+                  "name":"Hadoop",
+                  "size":6714
+                },
+                {
+                  "name":"Swagger",
+                  "size":6714
+                },
+                {
+                  "name":"Xpp3",
+                  "size":6714
+                },
+                {
+                  "name":"Ibatis",
+                  "size":6714
+                }
+
+
+
+              ]
+            },
+
+            {
+              "name":"Java Core",
+              "filter":"Java",
+              "children":[
+                {
+                  "name":"Mail",
+                  "size":3812
+                },
+                {
+                  "name":"Xml",
+                  "size":6714
+                },
+
+                {
+                  "name":"Log4j",
+                  "size":6714
+                },
+
+
+                {
+                  "name":"Reflection",
+                  "size":6714
+                },
+
+
+
+
+
+                {
+                  "name":"Jar executable",
+                  "filter":"jar",
+                  "size":6714
+                },
+
+                {
+                  "name":"Servlet",
+                  "size":6714
+                },
+                {
+                  "name":"Junit",
+                  "children":[
+                    {
+                      "name":"Mockito",
+                      "size":3812
+                    },
+                    {
+                      "name":"PowerMock",
+                      "size":6714
+                    },
+
+                    {
+                      "name":"RestAssured",
+                      "size":6714
+                    }
+
+
+
+                  ]
+                },
+
+                {
+                  "name":"Web server",
+                  "filter":"Java",
+                  "children":[
+                    {
+                      "name":"Tomcat",
+                      "size":3812
+                    },
+                    {
+                      "name":"JBoss",
+                      "size":6714
+                    },
+
+                    {
+                      "name":"Weblogic",
+                      "size":6714
+                    },
+
+
+                    {
+                      "name":"WebSphere",
+                      "size":6714
+                    }
+
+
+
+                  ]
+                },
+
+                {
+                  "name":"Build",
+                  "filter":"Java",
+                  "children":[
+                    {
+                      "name":"Ant",
+                      "size":3812
+                    },
+                    {
+                      "name":"Maven",
+                      "size":6714
+                    },
+                    {
+                      "name":"Jenkins",
+                      "size":6714
+                    }
+
+
+
+                  ]
+                }
+
+
+              ]
+            }
+
+
+
+
+
+          ]
+
+
+
+        },
+
+        {
+          "name":"Database",
+          "filter":"Java",
+          "children":[
+            {
+              "name":"PL SQL",
+              "filter":"PL",
+              "size":3812
+            },
+            {
+              "name":"Oracle XMLType",
+              "filter":"XMLType",
+              "size":6714
+            },
+            {
+              "name":"MongoDB",
+              "size":743
+            },
+            {
+              "name":"MySQL",
+              "size":743
+            },
+            {
+              "name":"SQL Server",
+              "size":743
+            },
+            {
+              "name":"HSQLDB",
+              "size":743
+            },
+            {
+              "name":"Postgres",
+              "size":743
+            },
+            {
+              "name":"Elastic Search",
+              "filter":"Elastic",
+              "size":743
+            },
+            {
+              "name":"Kibana",
+              "size":743
+            },
+            {
+              "name":"Neo4J",
+              "size":743
+            }
+          ]
+        },
+        {
+          "name":"PHP",
+          "children":[
+            {
+              "name":"Wordpress",
+              "size":3812
+            },
+            {
+              "name":"Modx",
+              "size":6714
+            },
+            {
+              "name":"Prestashop",
+              "size":743
+            }
+          ]
+        },
+
+
+
+        {
+          "name":"Front end - mobile applications",
+          "filter":"Front",
+          "children":[
+            {
+              "name":"Ionic",
+              "size":3812
+            },
+            {
+              "name":"AngularJS",
+              "size":6714
+            },
+            {
+              "name":"Javascript",
+              "size":3812
+            },
+            {
+              "name":"Jquery",
+              "size":6714
+            },
+            {
+              "name":"HTML",
+              "size":3812
+            },
+            {
+              "name":"CSS",
+              "size":6714
+            },
+            {
+              "name":"NodeJS",
+              "size":3812
+            },
+            {
+              "name":"Gulp",
+              "size":6714
+            },
+            {
+              "name":"Grunt",
+              "size":3812
+            },
+            {
+              "name":"GWT",
+              "size":6714
+            },
+            {
+              "name":"AWT",
+              "size":6714
+            },
+            {
+              "name":"applet",
+              "size":6714
+            },
+            {
+              "name":"swing",
+              "size":6714
+            },
+
+            {
+              "name":"D3",
+              "size":6714
+            },
+            {
+              "name":"GoJs",
+              "size":6714
+            },
+            {
+              "name":"RequireJs",
+              "size":6714
+            },
+            {
+              "name":"SinonJs",
+              "size":6714
+            }
+
+
+          ]
+        },
+
+
+
+        {
+          "name":"Tools",
+          "filter":"",
+          "children":[
+            {
+              "name":"Eclipse",
+              "size":3812
+            },
+            {
+              "name":"UML",
+              "size":6714
+            },
+            {
+              "name":"Linux",
+              "size":3812
+            },
+            {
+              "name":"Putty",
+              "size":6714
+            },
+            {
+              "name":"Open VPN",
+              "filter":"VPN",
+              "size":3812
+            },
+            {
+              "name":"WinSCP",
+              "size":6714
+            },
+            {
+              "name":"Filezilla",
+              "size":3812
+            },
+            {
+              "name":"Decompiler",
+              "size":6714
+            },
+            {
+              "name":"SVN",
+              "size":3812
+            },
+            {
+              "name":"GIT",
+              "size":6714
+            },
+            {
+              "name":"Photoshop",
+              "size":6714
+            },
+            {
+              "name":"Docker",
+              "size":6714
+            },
+            {
+              "name":"Cobertura",
+              "size":6714
+            },
+            {
+              "name":"Jmeter",
+              "size":6714
+            }
+
+          ]
+        },
+        {
+          "name":"Other Languages",
+          "filter":"",
+          "children":[
+            {
+              "name":"XPath",
+              "size":3812
+            },
+            {
+              "name":"Regular expression",
+              "size":6714
+            },
+            {
+              "name":"Weka",
+              "size":6714
+            },
+            {
+              "name":"Ontology",
+              "size":3812
+            },
+            {
+              "name":"Big Data",
+              "size":6714
+            },
+            {
+              "name":"Ruby",
+              "size":3812
+            },
+            {
+              "name":"Python",
+              "size":6714
+            },
+            {
+              "name":"WebSphere message broker",
+              "filter":"broker",
+              "size":3812
+            },
+            {
+              "name":"WebSphere datastage",
+              "filter":"datastage",
+              "size":6714
+            },
+            {
+              "name":"Flash",
+              "size":3812
+            },
+            {
+              "name":"Matlab",
+              "size":6714
+            },
+            {
+              "name":"Groovy",
+              "size":6714
+            },
+            {
+              "name":"C#",
+              "size":6714
+            },
+            {
+              "name":"Google API",
+              "size":6714
+            }
+
+          ]
+        }
+      ]},
+
+    {
+      "name":"Electronic",
+      "size":3812
+    },
+    {
+      "name":"Telecommunications",
+      "size":3812
+    },
+    {
+      "name":"robotics",
+      "size":3812
+    },
+    {
+      "name":"Security",
+      "size":3812
+    },
+    {
+      "name":"Operating systems",
+      "size":3812
+    },
+    {
+      "name":"Data mining",
+      "size":3812
+    },
+    {
+      "name":"Multimedia",
+      "size":3812
+    },
+    {
+      "name":"Software engineering",
+      "size":3812
+    },
+    {
+      "name":"English",
+      "size":3812
+    }
+
+
+
+
+
+  ]
+}
