@@ -70,12 +70,12 @@
         <div class="box box-primary">
             <div class="box-header with-border">
                 <i class="fa fa-balance-scale"></i>
-                <h3 class="box-title"><span style="font-size: 14px"><b>제품(서비스)-JIRA Project Mapping</b></span></h3>
+                <h3 class="box-title"><span style="font-size: 14px"><b>제품(서비스)-JIRA Project Gantt</b></span></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
 
-                <div id="ganttChart"></div>
+                <div id="ganttChart" style="display: block; margin: 0px auto;"></div>
                 <br/><br/>
                 <div id="eventMessage"></div>
 
@@ -93,55 +93,39 @@
 
 <script type="text/javascript">
     var ganttData = [
-        {
-            id: 1, name: "Feature 1", series: [
-                { name: "Planned", start: new Date(2010,00,01), end: new Date(2010,00,03) },
-                { name: "Actual", start: new Date(2010,00,02), end: new Date(2010,00,05), color: "#f0f0f0" }
-            ]
-        },
-        {
-            id: 2, name: "Feature 2", series: [
-                { name: "Planned", start: new Date(2010,00,05), end: new Date(2010,00,20) },
-                { name: "Actual", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#f0f0f0" },
-                { name: "Projected", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#e0e0e0" }
-            ]
-        },
-        {
-            id: 3, name: "Feature 3", series: [
-                { name: "Planned", start: new Date(2010,00,11), end: new Date(2010,01,03) },
-                { name: "Actual", start: new Date(2010,00,15), end: new Date(2010,01,03), color: "#f0f0f0" }
-            ]
-        },
-        {
-            id: 4, name: "Feature 4", series: [
-                { name: "Planned", start: new Date(2010,01,01), end: new Date(2010,01,03) },
-                { name: "Actual", start: new Date(2010,01,01), end: new Date(2010,01,05), color: "#f0f0f0" }
-            ]
-        },
-        {
-            id: 5, name: "Feature 5", series: [
-                { name: "Planned", start: new Date(2010,02,01), end: new Date(2010,03,20) },
-                { name: "Actual", start: new Date(2010,02,01), end: new Date(2010,03,26), color: "#f0f0f0" }
-            ]
-        },
-        {
-            id: 6, name: "Feature 6", series: [
-                { name: "Planned", start: new Date(2010,00,05), end: new Date(2010,00,20) },
-                { name: "Actual", start: new Date(2010,00,06), end: new Date(2010,00,17), color: "#f0f0f0" },
-                { name: "Projected", start: new Date(2010,00,06), end: new Date(2010,00,20), color: "#e0e0e0" }
-            ]
-        },
-        {
-            id: 7, name: "Feature 7", series: [
-                { name: "Planned", start: new Date(2010,00,11), end: new Date(2010,01,03) }
-            ]
-        },
-        {
-            id: 8, name: "Feature 8", series: [
-                { name: "Planned", start: new Date(2010,01,01), end: new Date(2010,01,03) },
-                { name: "Actual", start: new Date(2010,01,01), end: new Date(2010,01,05), color: "#f0f0f0" }
-            ]
-        }
+            {
+                id: 1, name: "aRMS", series: [
+                    { name: "PMO v-0.1.4", start: new Date(2021,00,01), end: new Date(2021,00,03) },
+                    { name: "DESIGN v-0.1.4", start: new Date(2021,00,02), end: new Date(2021,00,05), color: "#f0f0f0" },
+                    { name: "FRONTEND v-0.1.4", start: new Date(2021,00,06), end: new Date(2021,00,08), color: "#f0f0f0" },
+                    { name: "BACKEND v-0.1.4", start: new Date(2021,00,09), end: new Date(2021,00,11), color: "#f0f0f0" },
+                    { name: "QA v-0.1.4", start: new Date(2021,00,12), end: new Date(2021,00,15), color: "#f0f0f0" },
+                    { name: "OPER v-0.1.4", start: new Date(2021,00,18), end: new Date(2021,00,25), color: "#f0f0f0" },
+                    { name: "SALE v-0.1.4", start: new Date(2021,00,26), end: new Date(2021,00,30), color: "#f0f0f0" }
+                ]
+            },
+            {
+                id: 2, name: "DEVOPS", series: [
+                    { name: "PMO v-0.3.14", start: new Date(2021,00,03), end: new Date(2021,00,07) },
+                    { name: "DESIGN v-0.6.24", start: new Date(2021,00,08), end: new Date(2021,00,09), color: "#f0f0f0" },
+                    { name: "FRONTEND v-0.13.4", start: new Date(2021,00,10), end: new Date(2021,00,12), color: "#f0f0f0" },
+                    { name: "BACKEND v-0.10.4", start: new Date(2021,00,13), end: new Date(2021,00,16), color: "#f0f0f0" },
+                    { name: "QA v-0.14.45", start: new Date(2021,00,17), end: new Date(2021,00,22), color: "#f0f0f0" },
+                    { name: "OPER v-0.18.14", start: new Date(2021,00,23), end: new Date(2021,00,25), color: "#f0f0f0" },
+                    { name: "SALE v-0.31.43", start: new Date(2021,00,26), end: new Date(2021,00,30), color: "#f0f0f0" }
+                ]
+            },
+            {
+                id: 3, name: "JSTF", series: [
+                    { name: "PMO v-1.3.14", start: new Date(2021,00,03), end: new Date(2021,00,09) },
+                    { name: "DESIGN v-3.6.24", start: new Date(2021,00,10), end: new Date(2021,00,14), color: "#f0f0f0" },
+                    { name: "FRONTEND v-4.13.4", start: new Date(2021,00,15), end: new Date(2021,00,19), color: "#f0f0f0" },
+                    { name: "BACKEND v-6.10.4", start: new Date(2021,00,20), end: new Date(2021,00,24), color: "#f0f0f0" },
+                    { name: "QA v-9.14.45", start: new Date(2021,00,25), end: new Date(2021,00,26), color: "#f0f0f0" },
+                    { name: "OPER v-10.18.14", start: new Date(2021,00,27), end: new Date(2021,00,28), color: "#f0f0f0" },
+                    { name: "SALE v-11.31.43", start: new Date(2021,00,29), end: new Date(2021,00,30), color: "#f0f0f0" }
+                ]
+            }
     ];
 </script>
 
