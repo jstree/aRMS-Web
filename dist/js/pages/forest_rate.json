@@ -1,82 +1,82 @@
 {
   "items": [
     {
-      "location": "서울",
+      "location": "JIRA-ARMS-BACKEND",
       "land": "60524",
       "forest": "15719"
     },
     {
-      "location": "부산",
+      "location": "JIRA-ARMS-DESIGN",
       "land": "76735",
       "forest": "35786"
     },
     {
-      "location": "대구",
+      "location": "JIRA-ARMS-PUBLISH",
       "land": "88409",
       "forest": "48974"
     },
     {
-      "location": "인천",
+      "location": "JIRA-ARMS-FRONTEND",
       "land": "102945",
       "forest": "40427"
     },
     {
-      "location": "광주",
+      "location": "JIRA-ARMS-DB",
       "land": "50124",
       "forest": "19667"
     },
     {
-      "location": "대전",
+      "location": "JIRA-ARMS-OPER",
       "land": "53989",
       "forest": "30175"
     },
     {
-      "location": "울산",
+      "location": "JIRA-ARMS-SYSTEM",
       "land": "105895",
       "forest": "68917"
     },
     {
-      "location": "경기",
+      "location": "JIRA-ARMS-DEVOPS",
       "land": "1016715",
       "forest": "526985"
     },
     {
-      "location": "강원",
+      "location": "JIRA-ARMS-PROXY",
       "land": "1669308",
       "forest": "1368571"
     },
     {
-      "location": "충북",
+      "location": "JIRA-ARMS-NETWORK",
       "land": "743318",
       "forest": "495806"
     },
     {
-      "location": "충남",
+      "location": "JIRA-ARMS-AUTH",
       "land": "860324",
       "forest": "437851"
     },
     {
-      "location": "전북",
+      "location": "JIRA-ARMS-MONITOR",
       "land": "806677",
       "forest": "446516"
     },
     {
-      "location": "전남",
+      "location": "JIRA-ARMS-CICD",
       "land": "1224682",
       "forest": "694787"
     },
     {
-      "location": "경북",
+      "location": "JIRA-ARMS-PIPELINE",
       "land": "1902803",
       "forest": "1342798"
     },
     {
-      "location": "경남",
+      "location": "JIRA-ARMS-DEVTOOL",
       "land": "1053273",
       "forest": "706990"
     },
     {
-      "location": "제주",
+      "location": "JIRA-ARMS-CEO",
       "land": "184885",
       "forest": "88874"
     }
